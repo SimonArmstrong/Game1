@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: SWING1_M
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 82a55b75911503b4384b62103bbdec95, type: 2}
+  - {fileID: 11400000, guid: fa1077982e659174ca0333f7866e674f, type: 2}
+  - {fileID: 11400000, guid: 4e2853f9db6233147b25f03ef5a22751, type: 2}
+  - {fileID: 11400000, guid: c5493b10cd0e0c34f993642a6aed2e0f, type: 2}
+  hasSound: 0

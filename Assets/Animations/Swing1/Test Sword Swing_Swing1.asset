@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: Test Sword Swing_Swing1
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 901d33b28fa5bae4398f8c8855ae8a13, type: 2}
+  - {fileID: 11400000, guid: 1fe0066ded3fb3b49a644fa781223511, type: 2}
+  - {fileID: 11400000, guid: 710ce39d906d69e48b3986367408ef5f, type: 2}
+  - {fileID: 11400000, guid: dc63ef9c6693efc4088b1377796ee6a6, type: 2}
+  hasSound: 0

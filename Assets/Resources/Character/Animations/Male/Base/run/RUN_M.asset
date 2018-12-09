@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: RUN_M
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: fb48cb1c01e8c0a4ab7ccd7446e200cc, type: 2}
+  - {fileID: 11400000, guid: 42077ae97ed96394a83a78cf5532c211, type: 2}
+  - {fileID: 11400000, guid: 9432e4381d4df904f8575cbbe883e980, type: 2}
+  - {fileID: 11400000, guid: 363b57631ff6bb44aa227ed24114f7b3, type: 2}
+  hasSound: 1

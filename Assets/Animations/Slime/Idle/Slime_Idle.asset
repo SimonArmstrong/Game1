@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: Slime_Idle
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 37aa245ffca79cb4b9bc300598b1ff3d, type: 2}
+  - {fileID: 11400000, guid: e101b88bee53a344d94d63cb70514342, type: 2}
+  - {fileID: 11400000, guid: 42b6eb94677d1d4469b500233f534342, type: 2}
+  - {fileID: 11400000, guid: 116fb44cfc73e58408c9555827edcd79, type: 2}
+  hasSound: 0

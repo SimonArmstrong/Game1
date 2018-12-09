@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: Red Shirt_IDLE_M
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 99582ca88f812e44e95e2d77df942dca, type: 2}
+  - {fileID: 11400000, guid: 281ed68ff9f498e429a6df225b7f82c9, type: 2}
+  - {fileID: 11400000, guid: 10fea5783e05375459f67640aee1f9d3, type: 2}
+  - {fileID: 11400000, guid: cc50d404c8851cf4d9d82bd65508702b, type: 2}

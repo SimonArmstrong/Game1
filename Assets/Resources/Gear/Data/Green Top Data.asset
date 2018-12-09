@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65ea448e4ab423644b730062b205571f, type: 3}
+  m_Name: Green Top Data
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 2ddcff829a0d2a54bac1c0de9ebfeb35, type: 3}
+  value: 0
+  defense: 0
+  weight: 0
+  type: 1
+  idle: {fileID: 11400000, guid: 1d5f52a93daf71042a9de11bd7cb51a1, type: 2}
+  run: {fileID: 11400000, guid: ee22edf3458c69b4d8b2893005cbbd66, type: 2}
+  walk: {fileID: 0}
+  swing1: {fileID: 0}
+  swing2: {fileID: 0}
+  block: {fileID: 0}
+  interact: {fileID: 0}
+  carryIdle: {fileID: 0}
+  carryRun: {fileID: 0}

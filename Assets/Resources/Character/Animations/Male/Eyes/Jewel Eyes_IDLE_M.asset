@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: Jewel Eyes_IDLE_M
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 0b23c4180076fe347ade9fedb845857f, type: 2}
+  - {fileID: 11400000, guid: a02b02cde1fb93148bdfd36883025b45, type: 2}
+  - {fileID: 11400000, guid: 9986c0f66c3e2654a80b4dd27a35069f, type: 2}
+  - {fileID: 11400000, guid: 6fb5b4aa529dcde4297588ed51f2b856, type: 2}

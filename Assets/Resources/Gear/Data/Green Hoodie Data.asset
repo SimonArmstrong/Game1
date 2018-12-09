@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65ea448e4ab423644b730062b205571f, type: 3}
+  m_Name: Green Hoodie Data
+  m_EditorClassIdentifier: 
+  value: 0
+  stats:
+    attack: 0
+    defense: 0
+    magicAtt: 0
+    magicDef: 0
+    attackSpeed: 1
+    castSpeed: 1
+    critChance: 0.05
+    critDamage: 1.5
+  idle: {fileID: 0}
+  run: {fileID: 0}
+  walk: {fileID: 0}
+  swing1: {fileID: 0}
+  swing2: {fileID: 0}
+  block: {fileID: 0}
+  interact: {fileID: 0}
+  carryIdle: {fileID: 0}
+  carryRun: {fileID: 0}

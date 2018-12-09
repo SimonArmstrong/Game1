@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: White Shield_IDLE_M
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 2370a711565e38d4baa1b76eb6b65991, type: 2}
+  - {fileID: 11400000, guid: 043c57e137d376d4aac4d52ce323d2e5, type: 2}
+  - {fileID: 11400000, guid: e6e1d531c7d67ca4fb52ccb698f69c51, type: 2}
+  - {fileID: 11400000, guid: 87e8d79aec167df4dae8340cbb4d8b5c, type: 2}
