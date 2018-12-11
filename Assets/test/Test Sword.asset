@@ -19,3 +19,4 @@ MonoBehaviour:
   dcLeft: {fileID: 1923763851103876, guid: b6c34229a2e557b40a3877f90f22ca25, type: 2}
   dcRight: {fileID: 1108173906302018, guid: 493e35133ad8023428a52b342a6c7580, type: 2}
   attack: 10
+  attackSpeed: 3

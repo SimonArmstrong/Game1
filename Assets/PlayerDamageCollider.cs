@@ -9,7 +9,9 @@ public class PlayerDamageCollider : MonoBehaviour {
             if (collision.GetComponent<Player>() != null) return;
             Entity e = collision.GetComponent<Entity>();
             e.Health(-10);
-            e.GetComponent<Rigidbody2D>().AddForce((e.transform.position - transform.position).normalized * 1000);
+            Rigidbody2D rb = e.GetComponent<Rigidbody2D>();
+            if(rb != null)
+                rb.AddForce((e.transform.position - transform.position).normalized * 1000);
         }
     }
 }

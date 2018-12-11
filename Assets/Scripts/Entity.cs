@@ -154,7 +154,8 @@ public class Entity : MonoBehaviour {
     }
 
     public virtual void Die() {
-        Destroy(gameObject);
+        model.baseModel.destroyAfterPlayed = true;
+        model.ChangeAnimation((int)ANIMATIONS.DIE);
     }
 
 }

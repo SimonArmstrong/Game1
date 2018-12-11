@@ -188,6 +188,7 @@ public class Player : Entity {
 
         if (!isAttacking) return;
 
+        model.animSpeedModifier = equippedWeapon.attackSpeed + (attributes.dexterity * 0.2f) + (attributes.strength * 0.2f);
 
         model.ChangeAnimation(2); // Attack anim
 

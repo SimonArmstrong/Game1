@@ -16,4 +16,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4c9e8e80a41850443a25a759ccb148a2, type: 2}
   - {fileID: 11400000, guid: c710b22a94d35e6448ee9d8b2de3d518, type: 2}
   - {fileID: 11400000, guid: 6ef43337a59d21441a83568d81030c56, type: 2}
-  hasSound: 0
+  hasSound: 1

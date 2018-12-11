@@ -12,7 +12,8 @@ public enum ANIMATIONS {
     BLOCK, 
     INTERACT,
     CARRY_IDLE,
-    CARRY_RUN
+    CARRY_RUN,
+    DIE
 }
 
 public class TinkerAnimator : MonoBehaviour {
@@ -71,7 +72,7 @@ public class TinkerAnimator : MonoBehaviour {
 
         if (frameIndex > frameCount - 1) {
             if (destroyAfterPlayed)
-                Destroy(gameObject);
+                Destroy(transform.parent.parent.gameObject);
             if (animations[currentAnimation].anims[dir].loop) {
                 frameIndex = 0;
                 done = false;

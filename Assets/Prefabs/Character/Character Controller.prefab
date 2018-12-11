@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 114087550719964398}
   - component: {fileID: 50494023282923984}
   - component: {fileID: 70033764517147260}
+  - component: {fileID: 81749291344256056}
   m_Layer: 10
   m_Name: Character Controller
   m_TagString: Untagged
@@ -587,6 +588,13 @@ CapsuleCollider2D:
   m_Offset: {x: 0.015625, y: -0.37}
   m_Size: {x: 0.32, y: 0.33}
   m_Direction: 0
+--- !u!81 &81749291344256056
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1174825458222090}
+  m_Enabled: 1
 --- !u!95 &95267714356414306
 Animator:
   serializedVersion: 3
@@ -858,7 +866,7 @@ MonoBehaviour:
   frameIndex: 0
   timer: 0
   timeBetweenFrames: 0.2
-  animSpeedModifier: 2
+  animSpeedModifier: 4
   sortingOrder: 0
 --- !u!114 &114373698148105200
 MonoBehaviour:
@@ -955,7 +963,7 @@ MonoBehaviour:
   animations:
   - {fileID: 11400000, guid: 202acca776c9bb749b5c328a69f8c302, type: 2}
   - {fileID: 11400000, guid: 1e5af35a50551974c891a6dccd49433f, type: 2}
-  - {fileID: 11400000, guid: ae1f8dea0b7a5874fbc8825bc0a7d5fb, type: 2}
+  - {fileID: 11400000, guid: f6c3b8bb98c9e5d429c2cb8a2425d388, type: 2}
   currentAnimation: 0
   destroyAfterPlayed: 0
   renderer: {fileID: 0}
@@ -1012,7 +1020,7 @@ MonoBehaviour:
   animations:
   - {fileID: 11400000, guid: 6b591dd18a63f744b96c0ae0f364e8f9, type: 2}
   - {fileID: 11400000, guid: 767c3664d29af7f4ea896d209737f9a2, type: 2}
-  - {fileID: 11400000, guid: 22509b1987f44764ea3cb959e93528c2, type: 2}
+  - {fileID: 11400000, guid: c73152da622671b46b4d9c88c365f823, type: 2}
   currentAnimation: 0
   destroyAfterPlayed: 0
   renderer: {fileID: 0}
@@ -1091,7 +1099,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 7
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300004, guid: 1faf10ae5db0a164195a5bf8d475afed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1099,7 +1107,7 @@ SpriteRenderer:
   m_Size: {x: 2.03125, y: 2.03125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!212 &212126784129483530

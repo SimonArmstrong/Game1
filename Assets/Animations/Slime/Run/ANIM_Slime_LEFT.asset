@@ -25,7 +25,17 @@ MonoBehaviour:
   - {fileID: 21300078, guid: 946dad84170f8574b97ee940a2d8b234, type: 3}
   loop: 1
   timeBetweenFrames: 0.2
-  sound: []
+  sound:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 0b7a179b66feb1d4da22ac308198d3bc, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 53d39fa08d73e624aa6b1829eaed5499, type: 3}
+  - {fileID: 0}
   motionMultipliers:
   - 0
   - 1

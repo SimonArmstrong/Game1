@@ -9,11 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
-  m_Name: NPCPirate_Run
+  m_Name: Iron Sword_Swing1
   m_EditorClassIdentifier: 
   anims:
-  - {fileID: 11400000, guid: 7902259f9c026e54691fa5c96369393f, type: 2}
-  - {fileID: 11400000, guid: 7b49a17c672031f478765ff456914768, type: 2}
-  - {fileID: 11400000, guid: 0f216721732387f4faea29e6dd4e6df7, type: 2}
-  - {fileID: 11400000, guid: 98fb356987713e046a7895a83298fa1b, type: 2}
+  - {fileID: 11400000, guid: 5dbb67783c4b52e4eb7446d92a88f6de, type: 2}
+  - {fileID: 11400000, guid: 7cb3a1836ccc3314ab5e13d6f8ce09ec, type: 2}
+  - {fileID: 11400000, guid: ef3eb57277872ef4d9c1a520004f4028, type: 2}
+  - {fileID: 11400000, guid: 919c34b1ba7b60a4ba51f235fa34118d, type: 2}
   hasSound: 0

@@ -22,10 +22,10 @@ MonoBehaviour:
   loop: 1
   timeBetweenFrames: 0.2
   sound:
+  - {fileID: 8300000, guid: 0b7a179b66feb1d4da22ac308198d3bc, type: 3}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 6168529ebb44cb84db6d5d40cf086f9b, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   motionMultipliers:

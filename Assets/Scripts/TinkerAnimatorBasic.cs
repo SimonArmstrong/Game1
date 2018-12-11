@@ -37,6 +37,10 @@ public class TinkerAnimatorBasic : MonoBehaviour {
 			renderer = GetComponent<SpriteRenderer> ();
 		}
 
+        if (animations[currentAnimation].sound.Length >= animations[currentAnimation].sprites.Length) {
+            CreateSound(animations[currentAnimation].sound[frameIndex]);
+        }
+
 		// 
 		renderer.sprite = animations[currentAnimation].sprites [frameIndex];
 	}
@@ -56,7 +60,14 @@ public class TinkerAnimatorBasic : MonoBehaviour {
 		return animations [currentAnimation];
 	}
 
-	public string GetAnimationName(){
+    public void CreateSound(AudioClip clip)
+    {
+        AudioSource a = Instantiate(GameManager.instance.genericSoundObject, transform.position, Quaternion.identity).GetComponent<AudioSource>();
+        a.clip = clip;
+        a.volume = 0.1f;
+    }
+
+    public string GetAnimationName(){
 		return animations [currentAnimation].name;
 	}
 }
