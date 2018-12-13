@@ -22,6 +22,7 @@ public class Player : Entity {
 
     private Vector3 mov;
 
+    // The direction from our player to our mouse pos, or facing direction
     public Vector2 aimDir;
 
     public Equipment equipment;
@@ -36,11 +37,16 @@ public class Player : Entity {
 
     [Header("States")]
     public bool isAttacking = false;
+    public bool isDodging = false;
     public bool isStunned = false;
 
+    public bool canComboSwing = false;
+    public bool canCancelDodge = false;
+    public bool canCancelAttack = false;
 
     [Header("Options")]
     public bool attackTowardsMouse = false;
+    public bool dodgeTowardsMouse = false;
 
     void CreateCharacter() {
         character = new CharacterData("Simon", GENDER.MALE);
@@ -117,15 +123,14 @@ public class Player : Entity {
         string genderPrefix = character.gender == GENDER.FEMALE ? "F" : "M";
 
 
-        model.baseModel.animations[0] = Resources.Load<TAnim>(CHAR_ANIMS + "Base/idle/IDLE_" + genderPrefix);
-        model.baseModel.animations[1] = Resources.Load<TAnim>(CHAR_ANIMS + "Base/run/RUN_" + genderPrefix);
+        //model.baseModel.animations[0] = Resources.Load<TAnim>(CHAR_ANIMS + "Base/idle/IDLE_" + genderPrefix);
+        //model.baseModel.animations[1] = Resources.Load<TAnim>(CHAR_ANIMS + "Base/run/RUN_" + genderPrefix);
 
         LoadModelGear(equipment.torso, model.torsoModel);
         LoadModelGear(equipment.legs, model.bottomsModel);
         LoadModelGear(equipment.feet, model.feetModel);
         LoadModelGear(character.equipment.hair, model.hairModel);
         LoadModelGear(character.equipment.eyes, model.eyesModel);
-
     }
 
     public override void Health(float amt)
@@ -166,74 +171,136 @@ public class Player : Entity {
         ScreenFade.instance.color = new Color(0, 0, 0, 0);
     }
 
-    GameObject dcDown;
-    GameObject dcUp;
-    GameObject dcLeft;
-    GameObject dcRight;
+    AnimatedDamageCollider dcDown;
+    AnimatedDamageCollider dcUp;
+    AnimatedDamageCollider dcLeft;
+    AnimatedDamageCollider dcRight;
 
+    float dt = 1.0f;
+    bool dodged = false;
+    private void HandleDodge() {
+
+        if (isStunned || isAttacking) {
+            return;
+        }
+
+        if (Input.GetButtonDown("Dodge") && !isDodging) {
+            isDodging = true;
+
+            GetComponent<Rigidbody2D>().AddForce(dodgeTowardsMouse ? aimDir * 800 : dirVec * 800);
+        }
+        ////////////////
+        // Interrupts // 
+        ////////////////
+
+        if (!isDodging) return;
+
+        model.frameIndex = 0;
+        //GetComponent<Collider2D>().enabled = false;
+
+        dirVec = Vector3.zero;
+
+        dt -= Time.deltaTime;
+        if (dt <= 0.2f) //GetComponent<Collider2D>().enabled = true;
+        if (dt <= 0)
+        {
+            isDodging = false;
+            dt = 1.0f;
+        }
+    }
+
+    Vector2 swingDirection = Vector2.zero;
     private void HandleAttacks() {
+        #region Prerequisites
+        // Only handle if we have a weapon
         if (equippedWeapon == null) return;
 
-        if (dcDown == null) dcDown = Instantiate(equippedWeapon.dcDown, transform.position, Quaternion.identity, transform);
-        if (dcUp == null) dcUp = Instantiate(equippedWeapon.dcUp, transform.position, Quaternion.identity, transform);
-        if (dcLeft == null) dcLeft = Instantiate(equippedWeapon.dcLeft, transform.position, Quaternion.identity, transform);
-        if (dcRight == null) dcRight = Instantiate(equippedWeapon.dcRight, transform.position, Quaternion.identity, transform);
+        if (isDodging) return;
 
+        // Initialize damage colliders if we haven't yet
+        if (dcDown == null) dcDown =   Instantiate(equippedWeapon.dcDown, transform.position, Quaternion.identity,  transform).GetComponent<AnimatedDamageCollider>();
+        if (dcUp == null) dcUp =       Instantiate(equippedWeapon.dcUp, transform.position, Quaternion.identity,    transform).GetComponent<AnimatedDamageCollider>();
+        if (dcLeft == null) dcLeft =   Instantiate(equippedWeapon.dcLeft, transform.position, Quaternion.identity,  transform).GetComponent<AnimatedDamageCollider>();
+        if (dcRight == null) dcRight = Instantiate(equippedWeapon.dcRight, transform.position, Quaternion.identity, transform).GetComponent<AnimatedDamageCollider>();
+
+        dcDown.owner = this;
+        dcUp.owner = this;
+        dcLeft.owner = this;
+        dcRight.owner = this;
+
+        // Make sure we're not stunned
         if (isStunned) return;
-        if (Input.GetButtonDown("Fire1") && !isAttacking)
+
+
+
+        // Check for attack input
+        if (Input.GetButtonDown("Attack") && !isAttacking && !isStunned)
         {
             isAttacking = true;
             model.frameIndex = 0;
+            swingDirection = attackTowardsMouse ? aimDir : dirVec;
         }
 
-        if (!isAttacking) return;
+        /////////////////////////
+        //NOTE: Interrputions??//
+        /////////////////////////
 
+        // Just to make sure our attacking wasn't interrupted. Interruptions should happen before here.
+        if (!isAttacking) return;
+        #endregion
+
+        //TODO: Attack speed = weaponSpeed + ( DEX x 0.2 ) + ( STR x 0.2 ) ???
         model.animSpeedModifier = equippedWeapon.attackSpeed + (attributes.dexterity * 0.2f) + (attributes.strength * 0.2f);
 
         model.ChangeAnimation(2); // Attack anim
-
-        model.CalculateDirection(aimDir);
+        
+        model.CalculateDirection(swingDirection);
         model.UpdateFrames();
 
-        dirVec = aimDir;
-
+        #region DamageCollider
         if (model.baseModel.GetDC())
         {
             switch (direction)
             {
                 case Direction.forward:
-                    dcDown.SetActive(true);
+                    dcDown.gameObject.SetActive(true);
                     break;
                 case Direction.back:
-                    dcUp.SetActive(true);
+                    dcUp.gameObject.SetActive(true);
                     break;
                 case Direction.left:
-                    dcLeft.SetActive(true);
+                    dcLeft.gameObject.SetActive(true);
                     break;
                 case Direction.right:
-                    dcRight.SetActive(true);
+                    dcRight.gameObject.SetActive(true);
                     break;
             }
         }
         else {
-            dcUp.SetActive(false);
-            dcDown.SetActive(false);
-            dcLeft.SetActive(false);
-            dcRight.SetActive(false);
+            dcUp.gameObject.SetActive(false);
+            dcDown.gameObject.SetActive(false);
+            dcLeft.gameObject.SetActive(false);
+            dcRight.gameObject.SetActive(false);
         }
+        #endregion
 
         rootMotionSpeed = model.baseModel.GetRootMotion();
+
+        if (model.frameIndex == 6) {
+            canCancelAttack = true;
+        }
 
         if (model.baseModel.Done()) {
             isAttacking = false;
         }
         
-        //dirVec = dirVec * Vector2.zero;
+        //dirVec = swingDirection;
     }
 
     private void HandleMovement() {
         if (isAttacking) return;
         if (isStunned) return;
+        if (isDodging) return;
 
         rootMotionSpeed = 1;
 
@@ -288,7 +355,9 @@ public class Player : Entity {
     public override void FixedUpdate () {
 
         RefreshInventory();
+
         HandleAttacks();
+        //HandleDodge();
         HandleMovement();
 
         model.sortingOrder = -(int)(transform.position.y * GameManager.instance.sortingFidelity);

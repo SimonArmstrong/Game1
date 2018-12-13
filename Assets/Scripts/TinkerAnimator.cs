@@ -77,8 +77,9 @@ public class TinkerAnimator : MonoBehaviour {
                 frameIndex = 0;
                 done = false;
             } else {
-                frameIndex = 0;
                 done = true;
+                return;
+                //frameIndex = animations[currentAnimation].anims[dir].sprites.Length;
             }
         }
 

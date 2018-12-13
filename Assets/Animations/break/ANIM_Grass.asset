@@ -20,7 +20,7 @@ MonoBehaviour:
   - {fileID: 21300008, guid: 248788a3a519b7a4cbd4799c21ad2168, type: 3}
   - {fileID: 21300010, guid: 248788a3a519b7a4cbd4799c21ad2168, type: 3}
   loop: 0
-  timeBetweenFrames: 0.2
+  timeBetweenFrames: 0.08
   sound:
   - {fileID: 0}
   - {fileID: 0}

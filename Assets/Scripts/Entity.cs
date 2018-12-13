@@ -77,7 +77,7 @@ public class Entity : MonoBehaviour {
         return movement;
     }
 
-    public void LookAt(Vector3 target)
+    public Vector2 LookAt(Vector3 target)
     {
         Vector3 dir = (transform.position - target).normalized;
 
@@ -113,6 +113,29 @@ public class Entity : MonoBehaviour {
             model.UpdateDirection();
             model.SwitchFrames();
         }
+
+        return dot;
+    }
+
+    public Vector2 GetFacingVec()
+    {
+        Vector3 dir = Vector2.zero;
+        switch (direction) {
+            case Direction.forward:
+                dir = Vector2.down;
+                break;
+            case Direction.back:
+                dir = Vector2.up;
+                break;
+            case Direction.left:
+                dir = Vector2.left;
+                break;
+            case Direction.right:
+                dir = Vector2.right;
+                break;
+        }
+
+        return dir;
     }
 
     // Use this for initialization
@@ -124,6 +147,7 @@ public class Entity : MonoBehaviour {
         if (transform.Find("shadow") != null)
             shadow = transform.Find("shadow").gameObject;
     }
+    
 
     public virtual void Health(float amt) {
         hp += amt;
@@ -149,13 +173,15 @@ public class Entity : MonoBehaviour {
     }
 
     public virtual void FixedUpdate() {
-        if(model != null) direction = model.direction;
+        if (model != null) {
+            direction = model.direction;
+        }
+
         transform.position += (Vector3)dirVec.normalized * Time.deltaTime * attributes.moveSpeed * rootMotionSpeed;
     }
 
     public virtual void Die() {
         model.baseModel.destroyAfterPlayed = true;
-        model.ChangeAnimation((int)ANIMATIONS.DIE);
     }
 
 }

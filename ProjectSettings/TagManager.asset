@@ -21,8 +21,7 @@ TagManager:
   - Walkable
   - Avoid
   - Camera
-  - 
-  - 
+  - DamageCollider
   - 
   - 
   - 
