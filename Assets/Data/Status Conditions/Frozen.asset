@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f210c7ee599d8e4eb68bd451cb8bfe7, type: 3}
+  m_Name: Frozen
+  m_EditorClassIdentifier: 
+  type: 0
+  displayName: Frozen
+  strength: 1
+  duration: 8
+  icon: {fileID: 21300008, guid: 9ae212844e780294db0b2ab7199ab54f, type: 3}
+  description: Take damage over time unless an antidote is applied, for the duration.
+  target: {fileID: 0}
+  element: 0
+  attributeMod:
+    maxHP: 0
+    maxMP: 0
+    strength: 0
+    intelligence: 0
+    dexterity: 0
+    luck: 0
+    moveSpeed: 0
+    swimSpeed: 0
+  effectObject: {fileID: 1543456637073158, guid: 2131c3301019ac449aa25fd106ac4cc2,
+    type: 2}

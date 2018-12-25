@@ -14,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - PostProcessing
   - RTex
   - Player
   - Obstacles
@@ -22,13 +22,13 @@ TagManager:
   - Avoid
   - Camera
   - DamageCollider
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Map
+  - CameraEffector
+  - interactionTrigger
+  - Interactable
+  - NPC
+  - Enemy
+  - DungeonDoor
   - 
   - 
   - 

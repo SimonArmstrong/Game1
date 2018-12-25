@@ -23,7 +23,7 @@ MonoBehaviour:
   timeBetweenFrames: 0.08
   sound:
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 01d9956723646774c850751b33260821, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

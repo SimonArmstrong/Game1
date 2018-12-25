@@ -15,7 +15,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: 248788a3a519b7a4cbd4799c21ad2168, type: 3}
   loop: 1
-  timeBetweenFrames: 0.2
+  timeBetweenFrames: 0
   sound: []
   motionMultipliers: []
   damageCollider: 

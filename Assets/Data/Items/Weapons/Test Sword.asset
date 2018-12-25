@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8e1581731a1d1646a712387b5eb745f, type: 3}
+  m_Name: Test Sword
+  m_EditorClassIdentifier: 
+  icon: {fileID: 0}
+  value: 0
+  id: 
+  dcUp: {fileID: 1540566784031230, guid: ef1dad65e7441d648b08a964e6055bcb, type: 2}
+  dcDown: {fileID: 1963598708414614, guid: 9fd867f30e0dda44aaf6bab8c5cd47d6, type: 2}
+  dcLeft: {fileID: 1496280624513202, guid: fb5273d3a99f0a04e9f064487ff2fd5e, type: 2}
+  dcRight: {fileID: 1360204029617262, guid: 37f33d93a5704534cbdec121ca1648bf, type: 2}
+  attack: 71.2
+  attackSpeed: 3
+  conditions: []

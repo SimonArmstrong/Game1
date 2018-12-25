@@ -17,11 +17,4 @@ MonoBehaviour:
   loop: 1
   timeBetweenFrames: 0.2
   sound: []
-  motionMultipliers:
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  damageCollider: 
+  motionMultipliers: []
