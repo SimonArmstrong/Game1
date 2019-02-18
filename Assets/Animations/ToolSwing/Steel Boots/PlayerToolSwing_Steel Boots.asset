@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: PlayerToolSwing_Steel Boots
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 67965e99ca8f1c04fbf395d3523081cf, type: 2}
+  - {fileID: 11400000, guid: 05c3ffe8ece589a4684634a065f488a4, type: 2}
+  - {fileID: 11400000, guid: 74366f877bc7d8e4ca4c59a42a548fed, type: 2}
+  - {fileID: 11400000, guid: 785f14a41426720449c0ad1cdd169fcb, type: 2}
+  hasSound: 0

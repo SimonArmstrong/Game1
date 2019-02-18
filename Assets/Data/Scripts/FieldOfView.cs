@@ -16,7 +16,7 @@ public class FieldOfView : MonoBehaviour {
 
     private void Start()
     {
-        //StartCoroutine("FindTargetWithDelay", 0.2f);
+        StartCoroutine("FindTargetWithDelay", 0.2f);
     }
 
     IEnumerator FindTargetWithDelay(float delay)
@@ -30,6 +30,7 @@ public class FieldOfView : MonoBehaviour {
 
     public List<Transform> FindVisibleTargets()
     {
+        //Debug.Log("Finding Target");
         visibleTargets.Clear();
 
         Collider2D[] targetsInViewRadius = Physics2D.OverlapCircleAll(transform.position, viewRadius, targetMask);

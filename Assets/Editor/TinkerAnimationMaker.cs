@@ -51,7 +51,7 @@ public class TinkerAnimationMaker : ScriptableWizard
         animation.timeBetweenFrames = 0.2f;
         animation.sprites = animSheet.sprite;
         
-        ScriptableObjectUtility.CreateAsset<TinkerAnimation>(animation, rootDirectory + "/" + animName + "/ANIM_" + itemName);
+        ScriptableObjectUtility.CreateAsset<TinkerAnimation>(animation, rootDirectory + "/" + animName + "/ANIM_" + animName + "_" + itemName);
     }
 
     void OnWizardCreate()

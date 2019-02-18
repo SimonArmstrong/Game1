@@ -12,19 +12,17 @@ namespace DunGen
         {
             if (collision.gameObject.GetComponent<Player>() != null)
             {
-                /*
                 GameObject cutscene = GameManager.instance.genericCutsceneObject;
                 Cutscene go = Instantiate(cutscene).GetComponent<Cutscene>();
                 go.cam.actor = Camera.main.gameObject;
                 go.cam.positions.Add(transform);
-                go.cam.transitionTimes.Add(5);
-                go.cam.holdTimes.Add(0.3f);
+                go.cam.transitionTimes.Add(1);
+                go.cam.holdTimes.Add(.1f);
                 go.cam.screenColors.Add(new Color(0, 0, 0, 1));
                 go.fadeIn = true;
-                */
-                to.isActiveRoom = true;
-                from.isActiveRoom = false;
-                to.mapVisuals.SetActive(true);
+
+                go.handle.Add(from.OnRoomExit);
+                go.handle.Add(to.OnRoomEnter);
             }
         }
 

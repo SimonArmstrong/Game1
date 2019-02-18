@@ -40,18 +40,22 @@ public class TinkerAnimator : MonoBehaviour {
     private bool dc = false;
 
     private int frameIdc = 0;
-
-
     private void Start() {
 
     }
 
+    private void OnValidate()
+    {
+
+    }
+
     public void SwitchFrames(ref int frameIndex) {
-        done = false; 
+        done = false;
+        if (frameIdc != frameIndex)
+            soundPlayed = false;
         //frameIndex++;
         // Reset frames if we've reached the end -- Creates Loop
         if (animations.Length < 1) return;
-
         // If we haven't involved a renderer, involove it
         if (renderer == null) {
             renderer = GetComponent<SpriteRenderer>();
@@ -90,7 +94,7 @@ public class TinkerAnimator : MonoBehaviour {
                 if (animations[currentAnimation].anims[dir].sound[frameIndex] != null)
                 {
                     //animations[currentAnimation].anims[dir].sound[frameIndex] = 
-                    if (soundCooldown <= 0)
+                    if (!soundPlayed)
                         CreateSound(animations[currentAnimation].anims[dir].sound[frameIndex]);
                 }
             }
@@ -104,7 +108,9 @@ public class TinkerAnimator : MonoBehaviour {
         }
 
         renderer.sprite = animations[currentAnimation].anims[dir].sprites[frameIndex];
+        
         frameIdc = frameIndex;
+
     }
 
     public void OpenDC() {
@@ -158,11 +164,12 @@ public class TinkerAnimator : MonoBehaviour {
     public void CreateSound(AudioClip clip) {
         AudioSource a = Instantiate(GameManager.instance.genericSoundObject, transform.position, Quaternion.identity).GetComponent<AudioSource>();
         a.clip = clip;
-        a.volume = 0.5f;
-        soundCooldown = 0.2f;
+        a.volume = 0.17f;
+        soundPlayed = true;
     }
 
     public bool Done() {
+        //soundPlayed = false;
         return done;
     }
 }

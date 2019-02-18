@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: Steel Helmet_Swing1
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 1bf2ca30ec5e1514e91227488cb4a790, type: 2}
+  - {fileID: 11400000, guid: 39c21f8c03cc61c4d8331cc6ba79a58a, type: 2}
+  - {fileID: 11400000, guid: 5d42a9dc498a22c44b64531d7c6f45ac, type: 2}
+  - {fileID: 11400000, guid: fa22941431e12df4c83c28c260b4c6cb, type: 2}
+  hasSound: 0

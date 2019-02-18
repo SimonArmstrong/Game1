@@ -808,9 +808,15 @@ MonoBehaviour:
     critChance: 0.05
     critDamage: 1.5
   shadow: {fileID: 0}
+  conditions: []
+  isStunned: 0
+  conditionEffects: []
+  conditionDurations: []
+  conditionTicks: []
   dirVec: {x: 0, y: 0}
   direction: 0
   rootMotionSpeed: 1
+  rb: {fileID: 0}
   drops:
   - {fileID: 1489717659942674, guid: 4b4937fc1c6393949893e78aebdc9ec7, type: 2}
   - {fileID: 1489717659942674, guid: 4b4937fc1c6393949893e78aebdc9ec7, type: 2}
@@ -5609,9 +5615,15 @@ MonoBehaviour:
     critChance: 0.05
     critDamage: 1.5
   shadow: {fileID: 0}
+  conditions: []
+  isStunned: 0
+  conditionEffects: []
+  conditionDurations: []
+  conditionTicks: []
   dirVec: {x: 0, y: 0}
   direction: 0
   rootMotionSpeed: 1
+  rb: {fileID: 0}
   drops: []
   deathSound: {fileID: 0}
   partPrefab: {fileID: 1514540442536220, guid: dabfdd8338043fc43ae36265952422f0, type: 2}

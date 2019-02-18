@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: green-shirt_Swing1
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 18964339c008e8f46954db81056b4784, type: 2}
+  - {fileID: 11400000, guid: b93b53ff0dcc2664c842cb69b9f033c3, type: 2}
+  - {fileID: 11400000, guid: 850dce6765df076498cab19273d3c922, type: 2}
+  - {fileID: 11400000, guid: 52b69cba24ac6c1499f417a8cca35e2f, type: 2}
+  hasSound: 0

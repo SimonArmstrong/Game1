@@ -178,21 +178,8 @@ MonoBehaviour:
   attributes:
     maxHP: 50
     maxMP: 50
-    strength: 4
-    intelligence: 4
-    dexterity: 4
-    luck: 4
     moveSpeed: 2.3
     swimSpeed: 1.5
-  stats:
-    attack: 0
-    defense: 0
-    magicAtt: 0
-    magicDef: 0
-    attackSpeed: 1
-    castSpeed: 1
-    critChance: 0.05
-    critDamage: 1.5
   shadow: {fileID: 0}
   conditions: []
   isStunned: 0
@@ -203,8 +190,9 @@ MonoBehaviour:
   direction: 0
   rootMotionSpeed: 1
   rb: {fileID: 0}
+  objPoolTag: slime
   drops:
-  - {fileID: 1489717659942674, guid: 4b4937fc1c6393949893e78aebdc9ec7, type: 2}
+  - {fileID: 11400000, guid: 8d8d96810a32d3045b04033cf294757f, type: 2}
   deathSound: {fileID: 0}
 --- !u!114 &114434942596469260
 MonoBehaviour:
@@ -218,10 +206,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 0
-  doesDissapear: 0
+  doesDestroy: 0
+  doesPierce: 1
   damage: 1
   owner: {fileID: 114399394033360806}
   conditions: []
+  knockbackFromOwner: 1
 --- !u!114 &114792960794233450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -235,6 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseModel: {fileID: 114327455900757824}
   hairModel: {fileID: 0}
+  hatModel: {fileID: 0}
   eyesModel: {fileID: 0}
   feetModel: {fileID: 0}
   torsoModel: {fileID: 0}

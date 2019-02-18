@@ -13,13 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mname: 
   sprites:
-  - {fileID: 21300002, guid: b2321bfcac893814db9a32c873590e62, type: 3}
-  - {fileID: 21300010, guid: b2321bfcac893814db9a32c873590e62, type: 3}
-  - {fileID: 21300018, guid: b2321bfcac893814db9a32c873590e62, type: 3}
-  - {fileID: 21300026, guid: b2321bfcac893814db9a32c873590e62, type: 3}
-  - {fileID: 21300034, guid: b2321bfcac893814db9a32c873590e62, type: 3}
-  - {fileID: 21300042, guid: b2321bfcac893814db9a32c873590e62, type: 3}
-  - {fileID: 21300050, guid: b2321bfcac893814db9a32c873590e62, type: 3}
+  - {fileID: 21300002, guid: 3823055278492aa4b850bb3255cfee09, type: 3}
+  - {fileID: 21300010, guid: 3823055278492aa4b850bb3255cfee09, type: 3}
+  - {fileID: 21300018, guid: 3823055278492aa4b850bb3255cfee09, type: 3}
+  - {fileID: 21300026, guid: 3823055278492aa4b850bb3255cfee09, type: 3}
+  - {fileID: 21300034, guid: 3823055278492aa4b850bb3255cfee09, type: 3}
+  - {fileID: 21300042, guid: 3823055278492aa4b850bb3255cfee09, type: 3}
   loop: 0
   timeBetweenFrames: 0.2
   sound: []

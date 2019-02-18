@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: Steel Greaves_Swing2
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 7ae4708e087d4dc4897ddf9941276a36, type: 2}
+  - {fileID: 11400000, guid: 57066372d96118540aee3b4c7ec6bb34, type: 2}
+  - {fileID: 11400000, guid: fb96ffdd769379445bdbb0b62cef1957, type: 2}
+  - {fileID: 11400000, guid: 9fee6aa6e7082fa4c993a53cee29f4ba, type: 2}
+  hasSound: 0

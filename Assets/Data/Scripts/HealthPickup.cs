@@ -8,7 +8,7 @@ public class HealthPickup : Pickup {
         Player p = collision.GetComponent<Player>();
         if (p != null)
         {
-            p.Health(1);
+            p.OnHit(1);
         }
 
         base.OnTriggerEnter2D(collision);

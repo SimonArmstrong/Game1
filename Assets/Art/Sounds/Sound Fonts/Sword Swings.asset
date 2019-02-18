@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddeac9e76c85e894d8638a574a3b252e, type: 3}
+  m_Name: Sword Swings
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 5b8ce03e1e8994d4dbafef54af760a51, type: 3}
+  - {fileID: 8300000, guid: 58894998bebb30b4a8a9734b4e87ecfb, type: 3}

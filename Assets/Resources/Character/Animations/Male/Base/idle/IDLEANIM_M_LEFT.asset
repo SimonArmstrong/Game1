@@ -16,3 +16,5 @@ MonoBehaviour:
   - {fileID: 21300006, guid: 1edae264060e4414c8347fd26e969e64, type: 3}
   loop: 1
   timeBetweenFrames: 0.2
+  sound: []
+  motionMultipliers: []

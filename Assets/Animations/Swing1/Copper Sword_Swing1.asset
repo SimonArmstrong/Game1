@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: Copper Sword_Swing1
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 6ec5697774261d7439e043c4df82ba48, type: 2}
+  - {fileID: 11400000, guid: 3e53d19afe1c0f543a2e3e9248990f86, type: 2}
+  - {fileID: 11400000, guid: cbdac688e774cb944a8070fa6be28c26, type: 2}
+  - {fileID: 11400000, guid: 44b24ef18a53497478aa52dd914ea6db, type: 2}
+  hasSound: 0

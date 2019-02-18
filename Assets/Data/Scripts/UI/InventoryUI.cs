@@ -9,6 +9,7 @@ public class InventoryUI : MonoBehaviour {
     public int size = 30;
     public GameObject slotPrefab;
     public List<UISlot> slots = new List<UISlot>();
+    
 
     #region Singleton
     public static InventoryUI instance;

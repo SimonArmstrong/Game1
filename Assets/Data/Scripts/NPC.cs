@@ -53,7 +53,7 @@ public class NPC : Entity
 
     public override void Update()
     {
-        dirVec = GetComponent<StateController>().moveVec.normalized;
+        dirVec = Vector3.zero;//GetComponent<StateController>().moveVec.normalized;
 
         base.Update();
         if (Time.timeScale == 0) return;

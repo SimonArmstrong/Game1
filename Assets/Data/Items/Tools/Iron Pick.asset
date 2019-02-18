@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc2f488e9940fd649935913692fff4d5, type: 3}
+  m_Name: Iron Pick
+  m_EditorClassIdentifier: 
+  element: 0
+  id: 4c568a49cff06e24bb8c7aceb082ea85
+  databaseID: pick-iron
+  ItemName: Iron Pickaxe
+  iconAnim: {fileID: 0}
+  value: 0
+  MaximumStacks: 1
+  anim:
+  - {fileID: 11400000, guid: 6b591dd18a63f744b96c0ae0f364e8f9, type: 2}
+  - {fileID: 11400000, guid: 767c3664d29af7f4ea896d209737f9a2, type: 2}
+  - {fileID: 11400000, guid: ce29677246b2dc84a845009ba186cb24, type: 2}
+  - {fileID: 11400000, guid: ce29677246b2dc84a845009ba186cb24, type: 2}
+  - {fileID: 11400000, guid: 1c184a466c710c24fa5a6c2665ab73b0, type: 2}
+  HealthBonus: 0
+  ManaBonus: 0
+  StaminaBonus: 0
+  AttackBonus: 0
+  MagicAttackBonus: 0
+  BowAttackBonus: 0
+  DefenseBonus: 0
+  AttackSpeedBonus: 0
+  VitalityBonus: 0
+  CritBonus: 0
+  SpiritBonus: 0
+  EnduranceBonus: 0
+  StrengthBonus: 0
+  DexterityBonus: 0
+  IntelligenceBonus: 0
+  AgilityBonus: 0
+  ToughnessBonus: 0
+  HealthPercentBonus: 0
+  ManaPercentBonus: 0
+  StaminaPercentBonus: 0
+  AttackPercentBonus: 0
+  MagicAttackPercentBonus: 0
+  BowAttackPercentBonus: 0
+  DefensePercentBonus: 0
+  AttackSpeedPercentBonus: 0
+  VitalityPercentBonus: 0
+  CritPercentBonus: 0
+  SpiritPercentBonus: 0
+  EndurancePercentBonus: 0
+  StrengthPercentBonus: 0
+  DexterityPercentBonus: 0
+  IntelligencePercentBonus: 0
+  AgilityPercentBonus: 0
+  ToughnessPercentBonus: 0
+  gearType: 14
+  material: {fileID: 2100000, guid: 2d0328956fbadfc4ca2d08c43455a994, type: 2}
+  type: 1
+  toolStrength: 1

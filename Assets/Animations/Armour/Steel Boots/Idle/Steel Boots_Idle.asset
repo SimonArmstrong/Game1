@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: Steel Boots_Idle
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: f525922648fb7644a9bfeb00caea7df8, type: 2}
+  - {fileID: 11400000, guid: 0eac7d30d87c26a4ebf8cb682be62d40, type: 2}
+  - {fileID: 11400000, guid: ff9d106dcb8019747a2c1ea89a6707cb, type: 2}
+  - {fileID: 11400000, guid: 3cd76885fddb823488904cdbe52b1d45, type: 2}
+  hasSound: 0

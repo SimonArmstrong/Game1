@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8a81f3ca52b434787f98756aa586ef, type: 3}
+  m_Name: ANIM_Old Man Idle_Old Man
+  m_EditorClassIdentifier: 
+  mname: 
+  sprites:
+  - {fileID: 21300000, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300002, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300004, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300006, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300008, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300010, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300012, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300014, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300016, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300018, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300020, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300022, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300024, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300026, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300028, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300030, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300032, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300034, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300036, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300038, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300040, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300042, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300044, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300046, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300048, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300050, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300052, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300054, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300056, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300058, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300060, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300062, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300064, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300066, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300068, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300070, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  - {fileID: 21300072, guid: 591596f9e87f7b340838b5644a8d89e0, type: 3}
+  loop: 1
+  timeBetweenFrames: 0.2
+  sound: []
+  motionMultipliers: []
+  damageCollider: 

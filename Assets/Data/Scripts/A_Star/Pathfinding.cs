@@ -8,11 +8,15 @@ public class Pathfinding : MonoBehaviour
     PathRequestManager requestManager;
 
     GridScript grid;
-
+    
     void Awake()
     {
         requestManager = GetComponent<PathRequestManager>();
-        grid = GetComponent<GridScript>();
+        //grid = GetComponent<GridScript>();
+    }
+
+    private void Start() {
+        
     }
 
     void Update()
@@ -21,9 +25,17 @@ public class Pathfinding : MonoBehaviour
         //HandlePathfindingLOD();
     }
 
+
     public void StartFindPath(Vector2 startPos, Vector2 targetPos)
     {
+        grid = GameManager.instance.curGrid;
         StartCoroutine(FindPath(startPos, targetPos));
+    }
+
+    public void EndFindPath()
+    {
+        StopAllCoroutines();
+        requestManager.FinishProcessingPath(new Vector2[0], false);
     }
 
     #region PathfindingLOD
@@ -71,6 +83,8 @@ public class Pathfinding : MonoBehaviour
         Node startNode = grid.NodeFromWorldPoint(startPos);
         Node targetNode = grid.NodeFromWorldPoint(targetPos);
 
+        Debug.Log("Start Node worldPos: " + startNode.worldPos + ",   Target Node worldPos:" + targetNode.worldPos);
+
         if (startNode.walkable && targetNode.walkable)
         {
 
@@ -115,7 +129,7 @@ public class Pathfinding : MonoBehaviour
         yield return null;
         if (pathSuccess)
         {
-            waypoints = RetracePath(startNode, targetNode);//
+            waypoints = RetracePath(startNode, targetNode);
         }
         if (waypoints.Length == 0) pathSuccess = false;
         requestManager.FinishProcessingPath(waypoints, pathSuccess);

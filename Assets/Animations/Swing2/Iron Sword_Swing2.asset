@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Iron Sword_Swing2
   m_EditorClassIdentifier: 
   anims:
-  - {fileID: 11400000, guid: ace2f149a71adfe4e83aaea906a0ce86, type: 2}
-  - {fileID: 11400000, guid: 9625b964ca6b90a4184b31e324d64ebd, type: 2}
-  - {fileID: 11400000, guid: 442354125313fb148b9c2f1b52dd4bc2, type: 2}
-  - {fileID: 11400000, guid: 1a120fa1010d2744bb565cda6a65160e, type: 2}
+  - {fileID: 11400000, guid: 9f1ac208a03fb7544856cc50ff987346, type: 2}
+  - {fileID: 11400000, guid: a9f17f82576716c48af5c065564a912e, type: 2}
+  - {fileID: 11400000, guid: f5939bcb139ba744387b4764d503cbbe, type: 2}
+  - {fileID: 11400000, guid: cbc439cff1f51d441a366ea4f9cf2e04, type: 2}
   hasSound: 0

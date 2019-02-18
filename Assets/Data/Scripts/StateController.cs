@@ -32,12 +32,10 @@ public class StateController : MonoBehaviour
     void Start()
     {
         unit = GetComponent<Unit>();
-        if (waypoints == null) return;
+        //if (waypoints == null) return;
         enemyStats = GetComponent<EnemyStats>();
-        foreach(Transform point in waypoints)
-        {
-            wayPointList.Add(point);
-        }
+        //foreach(Transform point in waypoints)
+        //    wayPointList.Add(point);
         SetupAI(true, GameManager.instance.player.transform);
     }
 
@@ -56,7 +54,7 @@ public class StateController : MonoBehaviour
 
     void Update()
     {
-        if (!aiActive)
+        if (!gameObject.activeSelf)
             return;
         currentState.UpdateState(this);
     }

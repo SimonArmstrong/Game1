@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: Mithril Helmet_Run
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 0410d9f368b51cd4ca751b52a7d4d84d, type: 2}
+  - {fileID: 11400000, guid: f0802c374cc473e4494b5d0e75226802, type: 2}
+  - {fileID: 11400000, guid: ef73f396b7c39684b86b84de11eee8b0, type: 2}
+  - {fileID: 11400000, guid: b10095b06a1a9a5448ad32e80908f0dd, type: 2}
+  hasSound: 0

@@ -10,16 +10,18 @@ public enum Direction {
     left
 }
 
-public class Model : NetworkBehaviour {
+public class Model : MonoBehaviour {
     //public TAnim animation;
     public TinkerAnimator baseModel;
     public TinkerAnimator hairModel;
+    public TinkerAnimator hatModel;
     public TinkerAnimator eyesModel;
     public TinkerAnimator feetModel;
     public TinkerAnimator torsoModel;
     public TinkerAnimator bottomsModel;
     public TinkerAnimator weapon1Model;
     public TinkerAnimator weapon2Model;
+    public TinkerAnimator toolModel;
 
     public Direction direction;
     public int frameIndex;
@@ -32,6 +34,10 @@ public class Model : NetworkBehaviour {
 
     public void Attack() {
 
+    }
+
+    public void ResetFrameTimer() {
+        timer = timeBetweenFrames;
     }
 
     public void CalculateDirection(Vector3 dir) {
@@ -68,49 +74,72 @@ public class Model : NetworkBehaviour {
     }
 
     public void UpdateDirection() {
-        if (baseModel != null) { baseModel.dir = (int)direction;
+        if (baseModel != null) {
+            baseModel.dir = (int)direction;
             baseModel.GetComponent<SpriteRenderer>().sortingOrder = 0 + sortingOrder;
         }
-        if (hairModel != null) { hairModel.dir = (int)direction;
+        if (hairModel != null) {
+            hairModel.dir = (int)direction;
             hairModel.GetComponent<SpriteRenderer>().sortingOrder = 2 + sortingOrder;
         }
-        if (eyesModel != null) { eyesModel.dir = (int)direction;
+        if (hatModel != null) {
+            hatModel.dir = (int)direction;
+            hatModel.GetComponent<SpriteRenderer>().sortingOrder = 4 + sortingOrder;
+        }
+        if (eyesModel != null) {
+            eyesModel.dir = (int)direction;
             eyesModel.GetComponent<SpriteRenderer>().sortingOrder = 2 + sortingOrder;
         }
-        if (feetModel != null) { feetModel.dir = (int)direction;
+        if (feetModel != null) {
+            feetModel.dir = (int)direction;
             feetModel.GetComponent<SpriteRenderer>().sortingOrder = 1 + sortingOrder;
         }
-        if (torsoModel != null) { torsoModel.dir = (int)direction;
+        if (torsoModel != null) {
+            torsoModel.dir = (int)direction;
             torsoModel.GetComponent<SpriteRenderer>().sortingOrder = 3 + sortingOrder;
         }
-        if (bottomsModel != null) { bottomsModel.dir = (int)direction;
+        if (bottomsModel != null) {
+            bottomsModel.dir = (int)direction;
             bottomsModel.GetComponent<SpriteRenderer>().sortingOrder = 2 + sortingOrder;
         }
-        if (weapon1Model != null) { weapon1Model.dir = (int)direction; }
-        if (weapon2Model != null) { weapon2Model.dir = (int)direction; }
-
+        if (weapon1Model != null) {
+            weapon1Model.dir = (int)direction;
+            weapon1Model.GetComponent<SpriteRenderer>().sortingOrder = 3 + sortingOrder;
+        }
+        if (weapon2Model != null) {
+            weapon2Model.dir = (int)direction;
+            weapon2Model.GetComponent<SpriteRenderer>().sortingOrder = 5 + sortingOrder;
+        }
+        if (toolModel != null) {
+            toolModel.dir = (int)direction;
+            toolModel.GetComponent<SpriteRenderer>().sortingOrder = 50 + sortingOrder;
+        }
     }
 
     public void ChangeAnimation(int animID) {
         if (baseModel != null) baseModel.currentAnimation = animID;
         if (hairModel != null) hairModel.currentAnimation = animID;
+        if (hatModel != null) hatModel.currentAnimation = animID;
         if (eyesModel != null) eyesModel.currentAnimation = animID;
         if (feetModel != null) feetModel.currentAnimation = animID;
         if (torsoModel != null) torsoModel.currentAnimation = animID;
         if (bottomsModel != null) bottomsModel.currentAnimation = animID;
         if (weapon1Model != null) weapon1Model.currentAnimation = animID;
         if (weapon2Model != null) weapon2Model.currentAnimation = animID;
+        if (toolModel != null) toolModel.currentAnimation = animID;
     }
 
     public void SwitchFrames() {
         if (baseModel != null) baseModel.SwitchFrames(ref frameIndex);
         //if (hairModel != null) hairModel.SwitchFrames(ref frameIndex);
         if (eyesModel != null) eyesModel.SwitchFrames(ref frameIndex);
+        if (hatModel != null) hatModel.SwitchFrames(ref frameIndex);
         if (feetModel != null) feetModel.SwitchFrames(ref frameIndex);
         if (torsoModel != null) torsoModel.SwitchFrames(ref frameIndex);
         if (bottomsModel != null) bottomsModel.SwitchFrames(ref frameIndex);
         if (weapon1Model != null) weapon1Model.SwitchFrames(ref frameIndex);
-        //if (weapon2Model != null) weapon2Model.SwitchFrames(ref frameIndex);
+        if (weapon2Model != null) weapon2Model.SwitchFrames(ref frameIndex);
+        if (toolModel != null) toolModel.SwitchFrames(ref frameIndex);
     }
 
     public void UpdateFrames() {

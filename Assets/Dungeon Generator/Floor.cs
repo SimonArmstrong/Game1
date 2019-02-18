@@ -40,11 +40,17 @@ namespace DunGen
         public RoomObject startRoom;
         RoomObject currentRoom;
 
-        public void Start()
+        void Start()
+        {
+            DunGen.Dungeon.instance.currentFloor = this;
+        }
+
+        public void Init()
         {
             startRoom = Instantiate(mainRoomData[0].possibleRooms[0].roomObject, transform.position, Quaternion.identity, transform).GetComponent<RoomObject>();
             mainRoomData[0].roomInstances.Add(startRoom);
-            startRoom.isActiveRoom = true;
+            startRoom.OnRoomEnter();
+            startRoom.gameObject.GetComponent<GridScript>().Init();
             allRooms.Add(startRoom);
             currentRoom = startRoom;
             if (randomizeSeed) seed = Random.Range(0, 9999999);
@@ -67,6 +73,8 @@ namespace DunGen
                 }
 
                 mainRoomCount += mainRoomData[i].numberOfRooms;
+
+
             }
 
 
@@ -90,6 +98,10 @@ namespace DunGen
                     additionalRoomData[i] = data;
                 }
             }
+            for(int i = 1; i < allRooms.Count; i++)
+            {
+                allRooms[i].OnRoomExit();
+            }
         }
         void SetupData()
         {
@@ -97,6 +109,7 @@ namespace DunGen
         }
         bool didPlaceRoom = false;
         int mx = 0;
+        int nmx = 0;
         int mmax = 20000;
         int max = 5000;
         public RoomObject Generate(ref GenerationData data)
@@ -178,6 +191,7 @@ namespace DunGen
 
                 #region Loop exceptions
                 mx++;
+                nmx++;
                 if (mx >= max)
                 {
                     if (data.roomInstances.Count > 0)
@@ -188,10 +202,10 @@ namespace DunGen
                     //return null;
                 }
 
-                if (mx >= mmax)
+                if (nmx >= mmax)
                 {
                     Debug.LogError("Can't fit [" + data.name + "] dungeon");
-                    mx = 0;
+                    nmx = 0;
                     return null;
                 }
                 #endregion
@@ -207,7 +221,7 @@ namespace DunGen
                 {
                     Vector2 from = newRoom.raycastBounds[i].position;// + Vector3.up * ((x) * 0.03f) + Vector3.right * ((x) * 0.03f);
                     Vector2 target = (newRoom.raycastBounds[(i + 1 > newRoom.raycastBounds.Count - 1) ? 0 : i + 1].position - newRoom.raycastBounds[i].position);
-                    RaycastHit2D[] hit = Physics2D.RaycastAll(from, target, target.magnitude);
+                    RaycastHit2D[] hit = Physics2D.CircleCastAll(from, 0.25f, target, target.magnitude);
                     if (hit.Length > 0)
                     {
                         for (int j = 0; j < hit.Length; j++)
@@ -226,7 +240,7 @@ namespace DunGen
                 }
             }
 
-            Debug.Log(newRoom.ToString() + " Was placed");
+            //Debug.Log(newRoom.ToString() + " Was placed");
             return null;
         }
 

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeac35eb47aa2fb43853966985578bbf, type: 3}
+  m_Name: Blue Slime
+  m_EditorClassIdentifier: 
+  element: 0
+  id: 7a201880232a00146a280c4f7285fa2d
+  databaseID: 
+  ItemName: 
+  iconAnim: {fileID: 11400000, guid: 8aca52a8dcb66754e8bcae6f2a26dac9, type: 2}
+  value: 0
+  MaximumStacks: 999

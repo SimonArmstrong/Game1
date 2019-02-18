@@ -24,26 +24,71 @@ GameObject:
   - component: {fileID: 58981365612862066}
   - component: {fileID: 114664971298145924}
   - component: {fileID: 114855293556593316}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1950916480621410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4008270621388302}
+  - component: {fileID: 58214659886811988}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4008270621388302
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1950916480621410}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4206664080511438}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4206664080511438
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1914676844709948}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.64, y: -2.77, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -13.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4008270621388302}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58214659886811988
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1950916480621410}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.03}
+  serializedVersion: 2
+  m_Radius: 0.18
 --- !u!58 &58981365612862066
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -88,6 +133,7 @@ MonoBehaviour:
   currentAnimation: 0
   destroyAfterPlayed: 0
   renderer: {fileID: 0}
+  frameIndex: 0
   done: 0
 --- !u!114 &114855293556593316
 MonoBehaviour:
@@ -100,35 +146,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49466c39e5d2d0543bd7fe0d0ad34e4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shadow: {fileID: 0}
+  height2D: 0
+  shadowOffset: -7
   model: {fileID: 0}
   mp: 0
   hp: 0
   attributes:
     maxHP: 1
     maxMP: 0
-    strength: 0
-    intelligence: 0
-    dexterity: 0
-    luck: 0
     moveSpeed: 0
     swimSpeed: 0
-  stats:
-    attack: 0
-    defense: 0
-    magicAtt: 0
-    magicDef: 0
-    attackSpeed: 1
-    castSpeed: 1
-    critChance: 0.05
-    critDamage: 1.5
-  shadow: {fileID: 0}
+  conditions: []
+  isStunned: 0
+  conditionEffects: []
+  conditionDurations: []
+  conditionTicks: []
   dirVec: {x: 0, y: 0}
   direction: 0
   rootMotionSpeed: 1
+  rb: {fileID: 0}
+  objPoolTag: 
+  unit: {fileID: 0}
   drops:
-  - drop: {fileID: 0}
+  - item: {fileID: 0}
     dropChance: 0.1
-  - drop: {fileID: 0}
+  - item: {fileID: 0}
     dropChance: 0.1
   dropped: 0
 --- !u!212 &212342746033867276
@@ -146,7 +189,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2d0328956fbadfc4ca2d08c43455a994, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -165,8 +208,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ac3f6c2a802a4a3438099ffd003c4064, type: 3}
+  m_SortingOrder: 1342
+  m_Sprite: {fileID: 21300000, guid: 248788a3a519b7a4cbd4799c21ad2168, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

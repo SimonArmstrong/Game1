@@ -5,7 +5,7 @@ using UnityEngine;
 public class Grass : Entity {
     [System.Serializable]
     public class Drop {
-        public GameObject drop;
+        public Item item;
         public float dropChance = 0.1f;
     }
 
@@ -19,7 +19,7 @@ public class Grass : Entity {
             float rng = Random.Range(0.0f, 100.0f) * 00.1f;
             if (rng <= drops[i].dropChance)
             {
-                Instantiate(drops[i].drop, transform.position, Quaternion.identity);
+                Instantiate(GameManager.instance.genericItemDropObject, transform.position, Quaternion.identity).GetComponent<InventoryPickup>().item = drops[i].item;
                 return;
             }
         }

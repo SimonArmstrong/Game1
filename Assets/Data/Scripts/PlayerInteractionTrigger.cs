@@ -7,12 +7,13 @@ public class PlayerInteractionTrigger : MonoBehaviour {
     public Interactable interactable;
     public NPC _NPC;
     public AudioClip interactionSound;
+    public bool canInteract;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //if (!canInteract) return;
         Interactable target = collision.gameObject.GetComponent<Interactable>();
         NPC npc = collision.gameObject.GetComponent<NPC>();
-
         if (target != null) {
             popupAnimator.SetBool("Interaction", true);
             interactable = target;

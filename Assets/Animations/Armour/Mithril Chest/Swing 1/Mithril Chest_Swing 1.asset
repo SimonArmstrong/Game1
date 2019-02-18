@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: Mithril Chest_Swing 1
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 695820e2a82c0df45a2f4550e899e527, type: 2}
+  - {fileID: 11400000, guid: 3ea23dcc9236a304ebbda95d392eba29, type: 2}
+  - {fileID: 11400000, guid: f38de333dbbeb9844b8e98202e0401d8, type: 2}
+  - {fileID: 11400000, guid: e247eba98d513214887b55b82bbe96dc, type: 2}
+  hasSound: 0

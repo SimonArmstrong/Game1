@@ -208,6 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  flagForDeath: 0
   stateController: {fileID: 0}
 --- !u!114 &114249475419336608
 MonoBehaviour:
@@ -289,6 +290,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0c85f5d2ea2f44cb0cbac229b98382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  offset: 0
+  height2D: 0
 --- !u!114 &114908207797976700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -300,30 +304,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16a6f58838f9d6548a18778ed5d15659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shadow: {fileID: 0}
+  height2D: 0
+  shadowOffset: -7
   model: {fileID: 114986718576177276}
   mp: 0
   hp: 1
   attributes:
     maxHP: 1
     maxMP: 1
-    strength: 4
-    intelligence: 4
-    dexterity: 4
-    luck: 4
     moveSpeed: 1.5
     swimSpeed: 1.5
-  stats:
-    attack: 0
-    defense: 0
-    magicAtt: 0
-    magicDef: 0
-    attackSpeed: 1
-    castSpeed: 1
-    critChance: 0.05
-    critDamage: 1.5
-  shadow: {fileID: 0}
+  conditions: []
+  isStunned: 0
+  conditionEffects: []
+  conditionDurations: []
+  conditionTicks: []
   dirVec: {x: 0, y: 0}
   direction: 0
+  rootMotionSpeed: 1
+  rb: {fileID: 0}
+  objPoolTag: 
+  unit: {fileID: 0}
   cutscene: {fileID: 0}
   dialogue:
     dialogueData: {fileID: 11400000, guid: 1dac81e53f00b484ca02b0eaaacbc197, type: 2}
@@ -343,6 +345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseModel: {fileID: 114083285133178196}
   hairModel: {fileID: 0}
+  hatModel: {fileID: 0}
   eyesModel: {fileID: 0}
   feetModel: {fileID: 0}
   torsoModel: {fileID: 0}
@@ -389,7 +392,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 21656
   m_Sprite: {fileID: 21300000, guid: a4fe02f6997c6c7419f360e6e1f9ac2d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

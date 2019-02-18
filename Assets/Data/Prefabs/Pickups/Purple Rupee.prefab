@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34ed9839b671fde4487b67874d453190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 8300000, guid: 95753eb59f82f854ba7d07c04823562a, type: 3}
+  sound: {fileID: 0}
   amount: 50
 --- !u!114 &114458340806169624
 MonoBehaviour:
@@ -159,6 +159,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0c85f5d2ea2f44cb0cbac229b98382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  offset: 0
+  height2D: 0
 --- !u!212 &212733132245778756
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -193,7 +196,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -423
   m_Sprite: {fileID: 21300006, guid: d298387caaf33484b935b60130485b1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -239,7 +242,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -417
   m_Sprite: {fileID: 21300000, guid: a4fe02f6997c6c7419f360e6e1f9ac2d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

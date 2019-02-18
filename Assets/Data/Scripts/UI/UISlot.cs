@@ -7,6 +7,11 @@ public class UISlot : MonoBehaviour {
     public Item item;
     public Image itemIcon;
 
+    public void OnValidate() {
+        if(item == null)
+            itemIcon.GetComponent<Image>();
+    }
+
     public void OnEnable()
     {
         UpdateSlot();
@@ -23,24 +28,24 @@ public class UISlot : MonoBehaviour {
             itemIcon.color = new Color(0, 0, 0, 0);
             return;
         }
-        if (item.icon != null)
+        if (item.iconAnim.sprites[0] != null)
         {
             itemIcon.color = new Color(1, 1, 1, 1);
-            itemIcon.sprite = item.icon;
+            itemIcon.sprite = item.iconAnim.sprites[0];
         }
     }
 
     public void OnDrag() {
-        if (GameCursor.instance.held != null)
+        if (GameCursor.instance.heldItem != null)
         {
             if (item == null) {
-                item = GameCursor.instance.held;
-                GameCursor.instance.held = null;
+                item = GameCursor.instance.heldItem.item;
+                GameCursor.instance.heldItem = null;
             }
         }
         else
         {
-            GameCursor.instance.held = item;
+            //GameCursor.instance.heldItem = item;
             item = null;
         }
         UpdateSlot();
@@ -48,20 +53,20 @@ public class UISlot : MonoBehaviour {
     //public void 
     public void MouseUp()
     {
-        if (GameCursor.instance.held != null)
+        if (GameCursor.instance.heldItem != null)
         {
             if (item == null)
             {
                 // If there isn't an item in the slot
-                item = GameCursor.instance.held;
-                GameCursor.instance.held = null;
+                //item = GameCursor.instance.heldItem;
+                GameCursor.instance.heldItem = null;
             }
             else
             {
                 // If there is an item in the slot
                 Item tempItem = item;
-                item = GameCursor.instance.held;
-                GameCursor.instance.held = tempItem;
+               // item = GameCursor.instance.heldItem;
+             //   GameCursor.instance.heldItem = tempItem;
             }
         }
         UpdateSlot();

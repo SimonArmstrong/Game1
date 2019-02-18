@@ -13,7 +13,6 @@ public class LookDecision : Decision {
 
     bool Look(StateController controller)
     {
-        
         List<Transform> visibleTargets = controller.fov.FindVisibleTargets();
         if (visibleTargets.Count > 0)
         {

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: Steel Boots_Run
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: f8b897972c31ee348a358a77b700cd89, type: 2}
+  - {fileID: 11400000, guid: 8318fa73a7a8a9949ac6dc485d38e1ce, type: 2}
+  - {fileID: 11400000, guid: c4b283e16aec97642a42e3334fcf3cb5, type: 2}
+  - {fileID: 11400000, guid: 6ffbc7d01acdfc247b28ba8b4ada2f46, type: 2}
+  hasSound: 0

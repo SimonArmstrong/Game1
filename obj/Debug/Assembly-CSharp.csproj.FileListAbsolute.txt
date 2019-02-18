@@ -166,3 +166,14 @@ X:\Unity Projects\From Shadow\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs
 X:\Unity Projects\From Shadow\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 X:\Unity Projects\From Shadow\obj\Debug\Assembly-CSharp.dll
 X:\Unity Projects\From Shadow\obj\Debug\Assembly-CSharp.pdb
+X:\Unity Projects\From Shadow\Temp\bin\Debug\Unity.Postprocessing.Editor.dll
+X:\Unity Projects\From Shadow\Temp\bin\Debug\Unity.Postprocessing.Runtime.dll
+X:\Unity Projects\From Shadow\Temp\bin\Debug\Unity.RenderPipelines.Core.Editor.dll
+X:\Unity Projects\From Shadow\Temp\bin\Debug\Unity.RenderPipelines.Core.IncludePaths.dll
+X:\Unity Projects\From Shadow\Temp\bin\Debug\Unity.RenderPipelines.Core.Runtime.dll
+X:\Unity Projects\From Shadow\Temp\bin\Debug\Unity.RenderPipelines.Lightweight.Editor.dll
+X:\Unity Projects\From Shadow\Temp\bin\Debug\Unity.RenderPipelines.Lightweight.Runtime.dll
+X:\Unity Projects\From Shadow\Temp\bin\Debug\Unity.ShaderGraph.Editor.dll
+X:\Unity Projects\From Shadow\Temp\bin\Debug\Unity.2D.PixelPerfect.dll
+X:\Unity Projects\From Shadow\Temp\bin\Debug\Unity.2D.PixelPerfect.Editor.dll
+X:\Unity Projects\From Shadow\Temp\bin\Debug\XInputDotNetPure.dll

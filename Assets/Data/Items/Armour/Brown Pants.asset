@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65ea448e4ab423644b730062b205571f, type: 3}
+  m_Name: Brown Pants
+  m_EditorClassIdentifier: 
+  element: 0
+  icon: {fileID: 0}
+  value: 0
+  id: 
+  anim: []
+  StrengthBonus: 0
+  AgilityBonus: 0
+  IntelligenceBonus: 0
+  VitalityBonus: 0
+  LuckBonus: 0
+  AttackBonus: 0
+  DefenseBonus: 0
+  CritBonus: 0
+  StrengthPercentBonus: 0
+  AgilityPercentBonus: 0
+  IntelligencePercentBonus: 0
+  VitalityPercentBonus: 0
+  LuckPercentBonus: 0
+  AttackPercentBonus: 0
+  DefensePercentBonus: 0
+  CritPercentBonus: 0
+  gearType: 0
+  material: {fileID: 0}
+  defense: 0
+  weight: 0
+  type: 0
+  idle: {fileID: 11400000, guid: 694c3a9155d97574088d8ebf199b1bd4, type: 2}
+  run: {fileID: 11400000, guid: 1cd9dd07d432df94097290873211aaac, type: 2}
+  walk: {fileID: 0}
+  swing1: {fileID: 11400000, guid: 06673f333592d1a4db6dc0c43a6b26c6, type: 2}
+  swing2: {fileID: 11400000, guid: 72b9b773c743e0d408822ecc8d9e5e53, type: 2}
+  block: {fileID: 0}
+  interact: {fileID: 0}
+  carryIdle: {fileID: 0}
+  carryRun: {fileID: 0}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerPickupNotification : MonoBehaviour {
     private SpriteRenderer sr;
     public float timer = 1.2f;
@@ -26,6 +27,7 @@ public class PlayerPickupNotification : MonoBehaviour {
             sr.sprite = null;
         }
     }
+    
 
     private void Update()
     {

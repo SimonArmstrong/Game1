@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114875833721482018}
   - component: {fileID: 114455177288514820}
   - component: {fileID: 114985809905812120}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4553222442727836}
   - component: {fileID: 114918396287214084}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 4008378433580790}
   - component: {fileID: 212022184481727604}
   - component: {fileID: 114092790535766706}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Base Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,25 +181,20 @@ MonoBehaviour:
   attributes:
     maxHP: 50
     maxMP: 1
-    strength: 4
-    intelligence: 4
-    dexterity: 4
-    luck: 4
     moveSpeed: 1.5
     swimSpeed: 1.5
-  stats:
-    attack: 0
-    defense: 0
-    magicAtt: 0
-    magicDef: 0
-    attackSpeed: 1
-    castSpeed: 1
-    critChance: 0.05
-    critDamage: 1.5
   shadow: {fileID: 0}
+  conditions: []
+  isStunned: 0
+  conditionEffects: []
+  conditionDurations: []
+  conditionTicks: []
   dirVec: {x: 0, y: 0}
   direction: 0
   rootMotionSpeed: 1
+  rb: {fileID: 0}
+  objPoolTag: slime
+  unit: {fileID: 0}
   cutscene: {fileID: 0}
   dialogue:
     dialogueData: {fileID: 11400000, guid: 1dac81e53f00b484ca02b0eaaacbc197, type: 2}
@@ -218,7 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: {fileID: 0}
-  currentState: {fileID: 11400000, guid: ab393f84fc7c8c14f8a1a1eb723cc617, type: 2}
+  currentState: {fileID: 11400000, guid: 148489fe560da2d428dc28ad9702cbf9, type: 2}
   fov: {fileID: 114875833721482018}
   enemyStats: {fileID: 114455177288514820}
   eyes: {fileID: 0}
@@ -276,6 +271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseModel: {fileID: 114092790535766706}
   hairModel: {fileID: 0}
+  hatModel: {fileID: 0}
   eyesModel: {fileID: 0}
   feetModel: {fileID: 0}
   torsoModel: {fileID: 0}
@@ -300,6 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  flagForDeath: 0
   stateController: {fileID: 0}
 --- !u!212 &212022184481727604
 SpriteRenderer:

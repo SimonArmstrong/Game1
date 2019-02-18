@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: Mithril Sword_Swing2
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 3d202c29eb6ee5a40814a457379bb3f6, type: 2}
+  - {fileID: 11400000, guid: 6c265b47c4d07a24f82f86723dcc4416, type: 2}
+  - {fileID: 11400000, guid: 40a22770a4ca79f4eb19daef412430c8, type: 2}
+  - {fileID: 11400000, guid: 0137af5f9a143d044aa32df1ec4f6e0b, type: 2}
+  hasSound: 0

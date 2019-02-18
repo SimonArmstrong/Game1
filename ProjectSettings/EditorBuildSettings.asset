@@ -14,10 +14,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/PlayerSpawnerScene.unity
     guid: 4f1ffea8ecf13a94b8a2761ed6fd07bf
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/small room.unity
     guid: 0e679863ec3cd994bb4acab093bc8360
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/32x32.unity
     guid: 69507f97eb93f384e88cd41995284962
+  - enabled: 1
+    path: Assets/DevArea.unity
+    guid: 33ba1f978e2afd444a14a9b41796aaae
+  - enabled: 1
+    path: Assets/Scenes/Haunted Mansion Dungeon.unity
+    guid: 80dfa264e709ab645abc7cc4671a7629
   m_configObjects: {}

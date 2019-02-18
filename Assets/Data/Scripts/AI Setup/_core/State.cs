@@ -26,6 +26,7 @@ public class State : ScriptableObject
 
     private void CheckTransitions(StateController controller)
     {
+        //Debug.Log("Checking transitions");
         for (int i = 0; i < transitions.Length; i++)
         {
             bool decisionSucceeded = transitions[i].decision.Decide(controller);

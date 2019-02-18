@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: PlayerToolSwing_Base
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: b28a8bd77a47e434eb2d32840f61e46b, type: 2}
+  - {fileID: 11400000, guid: 0f75de2ee034e6c4d946f2f22bd716b4, type: 2}
+  - {fileID: 11400000, guid: b60e1009429ee834f9034246a661b752, type: 2}
+  - {fileID: 11400000, guid: 81db6aa31249c834c889cdc3a061212d, type: 2}
+  hasSound: 0

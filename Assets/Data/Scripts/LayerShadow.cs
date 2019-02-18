@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LayerShadow : MonoBehaviour {
+    public Transform target;
+    public int offset = -7;
+    public float height2D = 0;
 
-	// Use this for initialization
-	void Start () {
-        GetComponent<LayerSort>().offset = (int)(transform.localPosition.y * GameManager.instance.sortingFidelity) - 2;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void Update()
+    {
+        if (target == null) { Destroy(gameObject); return; }
+        transform.position = (target.position - (new Vector3(0, height2D / 2, 0)));
+
+        GetComponent<LayerSort>().offset = offset;
+    }
 }

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: Magnite Sword_Swing1
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 4f7337d5450dd4046a98739d75a80b0c, type: 2}
+  - {fileID: 11400000, guid: 4fa0795d98a240e409dddb2c63c4ead0, type: 2}
+  - {fileID: 11400000, guid: 103598dcc362a7a4f9a0192c8b2d0c91, type: 2}
+  - {fileID: 11400000, guid: a49a0944f28f4c84590d22cd20a08dd1, type: 2}
+  hasSound: 0

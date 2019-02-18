@@ -7,6 +7,7 @@ using UnityEditor;
 public class AnimSprite {
     public Sprite[] sprite;
     public int frames;
+    public bool loop = true;
 }
 
 public class GearCreationWindow : ScriptableWizard {
@@ -18,6 +19,7 @@ public class GearCreationWindow : ScriptableWizard {
 
     [Header("Item Details")]
     public string itemName;
+    public bool loop = true;
     public GENDER gender;
 
     [Header("Animation Sheets")]
@@ -47,6 +49,7 @@ public class GearCreationWindow : ScriptableWizard {
         string gender_prefix = gender == GENDER.MALE ? "M" : "F";
         string gender_name = gender == GENDER.MALE ? "Male" : "Female";
 
+        rootDirectory += itemName;
         string constPath = rootDirectory + gender_name;
 
         string initPath = constPath + "/" + itemName + " " + gender_prefix + "/" + animName + "/" + itemName + "_" + animName.ToUpper();
@@ -101,7 +104,7 @@ public class GearCreationWindow : ScriptableWizard {
 
         ScriptableObjectUtility.CreateAsset<Armour>(armour, "Resources/Gear/Data/" + itemName + " Data");
 
-        AddToDatabase(armour);
+        //AddToDatabase(armour);
     }
 
     TAnim GetAnim(string n) {
@@ -114,27 +117,27 @@ public class GearCreationWindow : ScriptableWizard {
         return a;
     }
 
-    void AddToDatabase(Armour a) {
-        if (database == null) return;
+    //void AddToDatabase(Armour a) {
+    //    if (database == null) return;
 
-        if (overrideDBLocation) {
-            database.data[databaseSlot] = a;
-            return;
-        }
+    //    if (overrideDBLocation) {
+    //        database.items[databaseSlot] = a;
+    //        return;
+    //    }
 
-        bool replaced = false;
-        for (int i = 0; i < database.data.Count; i++)
-        {
-            if (database.data[i].name == a.name)
-            {
-                database.data[i] = a;
-                replaced = true;
-                break;
-            }
-        }
+    //    bool replaced = false;
+    //    for (int i = 0; i < database.items.Length; i++)
+    //    {
+    //        if (database.items[i].name == a.name)
+    //        {
+    //            database.items[i] = a;
+    //            replaced = true;
+    //            break;
+    //        }
+    //    }
 
-        if (!replaced) database.data.Add(a);
-    }
+    //    if (!replaced) database.items.Add(a);
+    //}
 
     void OnWizardUpdate()
     {

@@ -1,0 +1,153 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1249878375502008}
+  m_IsPrefabAsset: 1
+--- !u!1 &1108601360212622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4008042486001304}
+  - component: {fileID: 114351661901941954}
+  m_Layer: 0
+  m_Name: Floor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1249878375502008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4351729496042338}
+  - component: {fileID: 114090539241253464}
+  - component: {fileID: 114755225550926584}
+  m_Layer: 0
+  m_Name: Dungeon (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4008042486001304
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1108601360212622}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4351729496042338}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4351729496042338
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1249878375502008}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4008042486001304}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114090539241253464
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1249878375502008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404267d01d296e4438e1caf434b581f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorCount: 1
+  currentFloor: {fileID: 114351661901941954}
+  floors:
+  - {fileID: 114351661901941954}
+  curGrid: {fileID: 0}
+  floorObject: {fileID: 0}
+  objPooler: {fileID: 0}
+  activeEnemies: []
+  numberOfFloors: 1
+--- !u!114 &114351661901941954
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1108601360212622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7189cd4f0b716b47b1050d2fdb71b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allRooms: []
+  separation: -0.428
+  generationDelay: 0
+  seed: 5652714
+  randomizeSeed: 0
+  showGenerationProcess: 0
+  mainRoomData:
+  - name: Main
+    possibleRooms:
+    - {fileID: 11400000, guid: a250cf028fd81d34f86cbd7b2c35fc30, type: 2}
+    - {fileID: 11400000, guid: f4e6fe0f15df7ca4fbbbd068e43d0b83, type: 2}
+    roomInstances: []
+    numberOfRooms: 7
+    roomCount: 0
+    spawnThreshold: 0
+    color: {r: 0.08675194, g: 1, b: 0, a: 1}
+  additionalRoomData:
+  - name: 
+    possibleRooms:
+    - {fileID: 11400000, guid: a250cf028fd81d34f86cbd7b2c35fc30, type: 2}
+    roomInstances: []
+    numberOfRooms: 5
+    roomCount: 0
+    spawnThreshold: 0
+    color: {r: 1, g: 0, b: 0, a: 1}
+  - name: 
+    possibleRooms:
+    - {fileID: 11400000, guid: a250cf028fd81d34f86cbd7b2c35fc30, type: 2}
+    roomInstances: []
+    numberOfRooms: 1
+    roomCount: 0
+    spawnThreshold: 1
+    color: {r: 0.9559822, g: 1, b: 0, a: 1}
+  startRoom: {fileID: 0}
+--- !u!114 &114755225550926584
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1249878375502008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f27b90cd09b37d49b160552fcaa7b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - tag: slime
+    prefab: {fileID: 1295669366826220, guid: 3f6c11add82a03944b43b41bbceb37ce, type: 2}
+    size: 1

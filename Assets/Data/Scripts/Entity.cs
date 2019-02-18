@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XInputDotNetPure;
+using FromShadow.CharacterStats;
 
-public class Entity : MonoBehaviour {
+public class Entity : EntityNEW {
     [SerializeField]
     public Model model;
 
@@ -11,17 +13,13 @@ public class Entity : MonoBehaviour {
     public float hp;
 
     public Attributes attributes;
-    public Stats stats;
-    public GameObject shadow;
+    //public Stats stats;
 
     [Header("Conditions")]
     public List<StatusCondition> conditions = new List<StatusCondition>();
 
-
     [Header("States")]
     public bool isStunned = false;
-
-
 
     public List<GameObject> conditionEffects = new List<GameObject>();
     public List<float> conditionDurations = new List<float>();
@@ -37,6 +35,10 @@ public class Entity : MonoBehaviour {
     public float rootMotionSpeed = 1;
     public Rigidbody2D rb;
 
+    public string objPoolTag;
+
+    public Unit unit;
+
     Vector2[] dirs = new Vector2[] {
         Vector2.down,
         Vector2.right,
@@ -51,12 +53,16 @@ public class Entity : MonoBehaviour {
     float walkTimer = 0.2f;
     int i = 4;
 
+
     public Vector2 StandStill() {
         return Vector2.zero;
     }
 
     public Vector2 InputMovement()
     {
+        //GamePadState padState = GamePad.GetState(PlayerIndex.One);
+        //float x = padState.ThumbSticks.Left.X;
+        //float y = padState.ThumbSticks.Left.Y;
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
         Vector3 movement = new Vector3(x, y, 0).normalized;
@@ -153,18 +159,21 @@ public class Entity : MonoBehaviour {
 
     // Use this for initialization
     public virtual void Start () {
+        #region //Warnings//
+        if(objPoolTag == null)Debug.LogWarning("This object needs a objPoolTag to be spawned.", transform);
+        #endregion
         mp = attributes.maxMP;
         hp = attributes.maxHP;
         mover = StandStill;
+        unit = GetComponent<Unit>();
         rb = GetComponent<Rigidbody2D>();
-
-        if (transform.Find("shadow") != null)
-            shadow = transform.Find("shadow").gameObject;
     }
     
-
-    public virtual void Health(float amt) {
+    public override void OnHit(float amt) {
         hp += amt;
+        if (Mathf.Abs(amt) > 0) {
+            GameManager.instance.SpawnDmgNum(transform, Mathf.Abs(Mathf.RoundToInt(amt)));
+        }
         if (hp <= 0) {
             hp = 0;
             Die();
@@ -172,19 +181,18 @@ public class Entity : MonoBehaviour {
     }
 
     // Update is called once per frame
-    public virtual void Update () {
-
-
+    public override void Update () {
         if (mp <= 0) {
             mp = 0;
         }
-
 
         if (hp >= attributes.maxHP)
             hp = attributes.maxHP;
 
         if (mp >= attributes.maxMP)
             mp = attributes.maxMP;
+
+        base.Update();
     }
 
     int effectArraySize;
@@ -202,7 +210,7 @@ public class Entity : MonoBehaviour {
                     conditionDurations[i] -= Time.deltaTime;
 
                     if (conditionTicks[i] <= 0) {
-                        Health(-(dot.strength));
+                        OnHit(-(dot.strength));
                         conditionTicks[i] = dot.tickLength;
                     }
 
@@ -255,6 +263,7 @@ public class Entity : MonoBehaviour {
     }
 
     public virtual void OnTriggerEnter2D(Collider2D col) {
+        /*
         DamageCollider dc = col.GetComponent<DamageCollider>();
         
         if (dc != null) {
@@ -274,10 +283,12 @@ public class Entity : MonoBehaviour {
                     rb.AddForce((transform.position - (dc.owner != null ? dc.owner.transform.position : dc.transform.position)).normalized * 500);
             }
         }
+        */
     }
 
     public virtual void OnCollisionEnter2D(Collision2D col)
     {
+        /*
         DamageCollider dc = col.transform.GetComponent<DamageCollider>();
 
         if (dc != null)
@@ -301,10 +312,11 @@ public class Entity : MonoBehaviour {
                     rb.AddForce((transform.position - (dc.owner != null ? dc.owner.transform.position : dc.transform.position)).normalized * 500);
             }
         }
+        */
     }
 
     public virtual void Die() {
         //model.baseModel.destroyAfterPlayed = true;
-        Destroy(gameObject);
+        GameManager.instance.KillEntity(this.gameObject);
     }
 }

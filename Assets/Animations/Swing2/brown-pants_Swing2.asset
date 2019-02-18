@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: brown-pants_Swing2
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 9d47747cd4c2b434a971e05ebb258129, type: 2}
+  - {fileID: 11400000, guid: ffebac8d81d89f34db06e50e909015ed, type: 2}
+  - {fileID: 11400000, guid: b11b218a5270eeb41827bdcb210afbb3, type: 2}
+  - {fileID: 11400000, guid: df3e0e779b7542944b9591a2293b4a14, type: 2}
+  hasSound: 0

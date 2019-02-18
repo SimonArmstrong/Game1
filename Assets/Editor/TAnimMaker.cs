@@ -14,6 +14,7 @@ public class TAnimMaker : ScriptableWizard
 
     [Header("Item Details")]
     public string itemName;
+    public string groupName;
 
     [Header("Animation Sheets")]
     public Sheet[] sheets;
@@ -37,23 +38,42 @@ public class TAnimMaker : ScriptableWizard
     {
         TinkerAnimation[] directionAnimations = new TinkerAnimation[4] { new TinkerAnimation(), new TinkerAnimation(), new TinkerAnimation(), new TinkerAnimation() };
         string[] dirs = new string[4] { "FORWARD", "RIGHT", "BACK", "LEFT" };
+        string finalPath = "";
 
-        string finalPath = "Assets/" + rootDirectory + "/" + animName;
+        if (groupName.Length > 0)
+            finalPath = rootDirectory + "/" + groupName + "/" + animName;
+        else
+            finalPath = rootDirectory + "/" + animName;
+
 
         if (!AssetDatabase.IsValidFolder("Assets/" + rootDirectory))
         {
             AssetDatabase.CreateFolder("Assets", rootDirectory);
         }
-        if (!AssetDatabase.IsValidFolder("Assets/" + rootDirectory + "/" + animName))
+        if (groupName.Length > 0)
         {
-            AssetDatabase.CreateFolder("Assets/" + rootDirectory, animName);
+            if (!AssetDatabase.IsValidFolder("Assets/" + rootDirectory + "/" + groupName))
+            {
+                AssetDatabase.CreateFolder("Assets/" + rootDirectory, groupName);
+            }
+            if (!AssetDatabase.IsValidFolder("Assets/" + rootDirectory + "/" + groupName + "/" + animName))
+            {
+                AssetDatabase.CreateFolder("Assets/" + rootDirectory + "/" + groupName, animName);
+            }
+        }
+        else
+        {
+            if (!AssetDatabase.IsValidFolder("Assets/" + rootDirectory + "/" + animName))
+            {
+                AssetDatabase.CreateFolder("Assets/" + rootDirectory, animName);
+            }
         }
 
         anim.anims = new TinkerAnimation[4];
         // Creates animation file for each facing direction
         for (int i = 0; i < directionAnimations.Length; i++)
         {
-            directionAnimations[i].loop = true;
+            directionAnimations[i].loop = animSheet.loop;
             directionAnimations[i].timeBetweenFrames = 0.2f;
 
             directionAnimations[i].sprites = new Sprite[animSheet.frames];
@@ -64,12 +84,11 @@ public class TAnimMaker : ScriptableWizard
                 directionAnimations[i].sprites[a] = animSheet.sprite[i + (a * 4)];
             }
            
-            ScriptableObjectUtility.CreateAsset<TinkerAnimation>(directionAnimations[i], rootDirectory + "/" + animName + "/ANIM_" + itemName + "_" + dirs[i]);
+            ScriptableObjectUtility.CreateAsset<TinkerAnimation>(directionAnimations[i], finalPath + "/ANIM_" + itemName + "_" + dirs[i]);
             //anim.anims[i] = (TinkerAnimation)Resources.Load(initPath + "ANIM_"+ gender_prefix + "_" + dirs[i]);
             anim.anims[i] = directionAnimations[i];
         }
-
-        ScriptableObjectUtility.CreateAsset<TAnim>(anim, rootDirectory + "/" + animName + "/" + itemName + "_" + animName);
+        ScriptableObjectUtility.CreateAsset<TAnim>(anim, finalPath + "/" + itemName + "_" + animName);
         AssetDatabase.Refresh();
     }
 

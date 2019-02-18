@@ -223,7 +223,6 @@ GameObject:
   m_Component:
   - component: {fileID: 196827730}
   - component: {fileID: 196827729}
-  - component: {fileID: 196827728}
   m_Layer: 0
   m_Name: Dungeon
   m_TagString: Untagged
@@ -231,18 +230,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &196827728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114051165070717312, guid: 9b6deb4146193d34fa21e6a066936beb,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 196827727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &196827729
 MonoBehaviour:
   m_ObjectHideFlags: 0

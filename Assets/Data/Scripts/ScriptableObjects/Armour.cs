@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName = "Armour")]
-public class Armour : Item {
+[CreateAssetMenu(menuName = "Item/Armour")]
+public class Armour : EquippableItem {
     public float defense;
     public float weight;
-    public GearType type;
 
     [Header("Animation Data")]
     public TAnim idle;

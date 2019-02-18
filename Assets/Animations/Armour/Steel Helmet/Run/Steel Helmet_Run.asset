@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: Steel Helmet_Run
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 95a54d7a415de1140b3c1b370a837ddb, type: 2}
+  - {fileID: 11400000, guid: b6c87cfdf4776fe49ae16068aab78744, type: 2}
+  - {fileID: 11400000, guid: 1e456b59c49a8fd46b55d9358e0a3894, type: 2}
+  - {fileID: 11400000, guid: 8a1840da443c97a4d97eea84398c4150, type: 2}
+  hasSound: 0

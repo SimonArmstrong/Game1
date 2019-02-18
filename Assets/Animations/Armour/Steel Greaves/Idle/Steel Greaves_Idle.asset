@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: Steel Greaves_Idle
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 171bbb135797b65429300683928cbb26, type: 2}
+  - {fileID: 11400000, guid: f318cef113128b540919bb2e06692d7a, type: 2}
+  - {fileID: 11400000, guid: 0afabe698bef7be48bee36109a122b25, type: 2}
+  - {fileID: 11400000, guid: 2199002fbaed5d4488ff08a05d52f336, type: 2}
+  hasSound: 0

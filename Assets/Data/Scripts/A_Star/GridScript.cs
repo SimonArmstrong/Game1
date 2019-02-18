@@ -13,13 +13,12 @@ public class GridScript : MonoBehaviour {
     LayerMask walkableMask;
     Dictionary<int, int> walkableRegionsDictionary = new Dictionary<int, int>();
 
-    Node[,] grid;
+    public Node[,] grid;
+
+    GameManager gameManager;
 
     float nodeDiameter;
     int gridSizeX, gridSizeY;
-    private void Awake() {
-        Init();
-    }
     public void Init()
     {
         nodeDiameter = nodeRadius * 2;
@@ -29,10 +28,13 @@ public class GridScript : MonoBehaviour {
         foreach(TerrainType region in walkableRegions)
         {
             walkableMask.value |= region.terrainMask.value;
-            walkableRegionsDictionary.Add((int)Mathf.Log(region.terrainMask.value, 2.0f),region.terrainPenalty);
+            if(!walkableRegionsDictionary.ContainsKey((int)Mathf.Log(region.terrainMask.value, 2.0f)))
+                walkableRegionsDictionary.Add((int)Mathf.Log(region.terrainMask.value, 2.0f),region.terrainPenalty);
         }
 
         CreateGrid();
+
+        GameManager.instance.UpdateCurGrid(this);
     }
 
     public int MaxSize {
@@ -42,9 +44,17 @@ public class GridScript : MonoBehaviour {
         }
     }
 
+    public void ClearGrid()
+    {
+        displayGridGizmos = false;
+        grid = new Node[0, 0];
+    }
+
     void CreateGrid()
     {
+        displayGridGizmos = true;
         grid = new Node[gridSizeX, gridSizeY];
+        //Debug.Log(grid.Length);
         Vector2 worldBottomLeft = new Vector2(transform.position.x, transform.position.y) - Vector2.right * gridWorldSize.x / 2 - Vector2.up * gridWorldSize.y / 2;
         for(int x = 0; x < gridSizeX; x++)
         {
@@ -110,7 +120,7 @@ public class GridScript : MonoBehaviour {
         {
             foreach (Node n in grid)
             {
-                Gizmos.color = (n.walkable) ? Color.white : Color.red;
+                Gizmos.color = (n.walkable) ? new Color(1, 1, 1, .3f) : new Color(1, 0, 0, 0.3f);
                 Gizmos.DrawWireSphere(n.worldPos, nodeRadius);
             }
         }

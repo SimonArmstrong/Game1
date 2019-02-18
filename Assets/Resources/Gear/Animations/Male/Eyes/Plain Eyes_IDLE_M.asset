@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anims:
   - {fileID: 11400000, guid: ed14665b44e9b934d904bf7d872625a6, type: 2}
-  - {fileID: 11400000, guid: 24cbdb8a91fa6ec419f43f4e85e2de49, type: 2}
-  - {fileID: 11400000, guid: aa2b8688f49d9e044818322bbd4a3182, type: 2}
   - {fileID: 11400000, guid: bdd2241a96e87524480f76bccc7fbed7, type: 2}
+  - {fileID: 11400000, guid: aa2b8688f49d9e044818322bbd4a3182, type: 2}
+  - {fileID: 11400000, guid: 24cbdb8a91fa6ec419f43f4e85e2de49, type: 2}
+  hasSound: 0

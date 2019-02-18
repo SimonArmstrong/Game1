@@ -15,7 +15,7 @@ public class ScreenFade : MonoBehaviour {
 	void Update () {
         if (GetComponent<Image>().color != color)
         {
-            GetComponent<Image>().color = Color.Lerp(GetComponent<Image>().color, color, Time.unscaledDeltaTime * 5);
+            GetComponent<Image>().color = Color.Lerp(GetComponent<Image>().color, color, Time.unscaledDeltaTime * 20);
         }
 	}
 }

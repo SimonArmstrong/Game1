@@ -15,13 +15,12 @@ public class CalculatePixelPerfectProjectionSize : MonoBehaviour {
         }
     }
 
+    public Transform quadTransform;
     public Aspect aspectRatio = new Aspect(16, 9);
     public RenderTexture renderTexture;
 
     public int pixelsPerUnit = 32;
-    public int pixelScale = 1;
-
-    public float height = 288;
+    
     public Camera renderCamera;
 
     // Use this for initialization
@@ -31,19 +30,13 @@ public class CalculatePixelPerfectProjectionSize : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //height = pixelsPerUnit * aspectRatio.aspectHeight;
-        float screenPixelSize = (height / (pixelScale * pixelsPerUnit)) * 0.5f;
-        GetComponent<Camera>().orthographicSize = screenPixelSize;
-        //renderTexture = new RenderTexture(pixelsPerUnit * aspectRatio.aspectWidth, height, 2);
-        
-        renderCamera.orthographicSize += (Input.GetAxis("Mouse ScrollWheel") * Time.smoothDeltaTime * 50);
-
-        if (renderCamera.orthographicSize >= screenPixelSize) {
-            renderCamera.orthographicSize = screenPixelSize;
-        }
-        if (renderCamera.orthographicSize <= 1.05f) {
-            renderCamera.orthographicSize = 1.05f;
-        }
+        float pixelScale = Mathf.Clamp(Mathf.Round(Screen.height / GetComponent<PixelPerfectCam>().zoom), 1, 8);
+        //GetComponent<Camera>().orthographicSize = screenPixelSize;
+        float pixelWidth = (pixelsPerUnit * aspectRatio.aspectWidth);
+        float pixelHeight = (pixelsPerUnit * aspectRatio.aspectHeight);
+        RenderTexture rTex = new RenderTexture((int)(pixelWidth), (int)(pixelHeight), 2);
+        renderTexture = rTex;
+        quadTransform.localScale = new Vector3(aspectRatio.aspectWidth , aspectRatio.aspectHeight * pixelScale, 1);
         //renderCamera.orthographicSize = Mathf.Clamp(renderCamera.orthographicSize, 1.05f, (height / (pixelScale * pixelsPerUnit)) * 0.5f);
     }
 }

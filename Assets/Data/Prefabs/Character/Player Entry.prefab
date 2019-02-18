@@ -34,7 +34,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1991149263437588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5, y: 2.01, z: -0.08245516}
+  m_LocalPosition: {x: -0.37, y: -6.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,7 +57,7 @@ MonoBehaviour:
     type: 2}
   cameraPrefab: {fileID: 1257664684005228, guid: 90d0b1e143f43c145a5a336c7f827ea4,
     type: 2}
-  playerCanvasPrefab: {fileID: 1207711874089156, guid: f26afd8868905d741bb67ac6f98b927b,
+  playerCanvasPrefab: {fileID: 1147988103756134, guid: a7a1b4f30ccc6c346a159ac7a1381d6c,
     type: 2}
   playerInst: {fileID: 0}
   playerCanvasInst: {fileID: 0}

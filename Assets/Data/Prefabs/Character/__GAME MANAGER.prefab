@@ -20,9 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4638274600301698}
   - component: {fileID: 114181566080258826}
-  - component: {fileID: 114585008770457222}
   - component: {fileID: 114284941617360370}
   - component: {fileID: 114319650878360962}
+  - component: {fileID: 114138462778951294}
+  - component: {fileID: 114927994286318100}
   m_Layer: 0
   m_Name: __GAME MANAGER
   m_TagString: Untagged
@@ -74,6 +75,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114138462778951294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1174177340566442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 835c56b74f71c3b43ac0192740204ab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDatabase: {fileID: 0}
 --- !u!114 &114181566080258826
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -90,12 +103,28 @@ MonoBehaviour:
     type: 2}
   genericCutsceneObject: {fileID: 1911568577250704, guid: 3c869ad52ead9414cbc20afbaaa33dde,
     type: 2}
-  genericItemDropObject: {fileID: 1489359483328602, guid: d5fccc02e2ef61e41bf505c3f64f14a8,
+  genericItemDropObject: {fileID: 1632078604509696, guid: 2312b2fb73c13e44eaeb0bf08e1e12b5,
+    type: 2}
+  genericShadowObject: {fileID: 1874216346506732, guid: 3e04d28596fc69f4d9a376c1ad80b795,
+    type: 2}
+  genericHitObject: {fileID: 1140760220421174, guid: a23f8f32670e56b42b306b17580d446e,
     type: 2}
   state: 0
   sortingFidelity: 50
+  time: 0
+  dayLength: 360
+  nightLength: 360
+  daytime: 1
+  nighttime: 0
+  died: 0
   player: {fileID: 0}
   playerEntry: {fileID: 0}
+  curGrid: {fileID: 0}
+  canvas: {fileID: 0}
+  objPooler: {fileID: 0}
+  activeEnemies: []
+  dmgNums: []
+  dmgNumsToRemove: 
 --- !u!114 &114284941617360370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -139,7 +168,7 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
---- !u!114 &114585008770457222
+--- !u!114 &114927994286318100
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,14 +176,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1174177340566442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 807ea64a1dfd4c844966214c02566815, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f27b90cd09b37d49b160552fcaa7b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nightColor: {r: 0.060947105, g: 0.059006754, b: 0.24528301, a: 1}
-  dayColor: {r: 1, g: 1, b: 1, a: 1}
-  current: {r: 0, g: 0, b: 0, a: 0}
-  daytime: 0
-  indoors: 0
+  pools:
+  - tag: dmg_num
+    prefab: {fileID: 1261691983959632, guid: 3cb0f84696b6e1841898ba3ebcae8765, type: 2}
+    size: 30
+  enemyPools: []
 --- !u!114 &114938706660549598
 MonoBehaviour:
   m_ObjectHideFlags: 1

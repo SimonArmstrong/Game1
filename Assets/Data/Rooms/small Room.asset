@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44e9a25cea62bd84faf490a313fd6f2f, type: 3}
   m_Name: small Room
   m_EditorClassIdentifier: 
-  roomObject: {fileID: 1130238186343746, guid: 4028afae62293d24e91c60cdd4d51169, type: 2}
+  roomObject: {fileID: 1905162114120396, guid: 801fd3a7e52c2d84cac86b19cef42286, type: 2}

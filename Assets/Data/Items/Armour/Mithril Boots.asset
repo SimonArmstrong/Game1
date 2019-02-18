@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65ea448e4ab423644b730062b205571f, type: 3}
+  m_Name: Mithril Boots
+  m_EditorClassIdentifier: 
+  element: 0
+  id: 5cd62acb446af3d4aa994a31da567d39
+  databaseID: boots-mithril
+  ItemName: Mithril Boots
+  iconAnim: {fileID: 11400000, guid: d7a19d2891a43d94192eff0a7bc79d28, type: 2}
+  value: 0
+  MaximumStacks: 1
+  anim:
+  - {fileID: 11400000, guid: 698b13ae8d228444eaf6636b0265428c, type: 2}
+  - {fileID: 11400000, guid: c09fd1136954ca24389091da9d9fb258, type: 2}
+  - {fileID: 11400000, guid: e00b7959e10d27c43b10eef1c52a6b21, type: 2}
+  - {fileID: 11400000, guid: 2aca89237a81eac4ca419b6a1d64046a, type: 2}
+  - {fileID: 11400000, guid: a637066eac33f6e49a86be34d0d3e7cc, type: 2}
+  HealthBonus: 0
+  ManaBonus: 0
+  StaminaBonus: 0
+  AttackBonus: 0
+  MagicAttackBonus: 0
+  BowAttackBonus: 0
+  DefenseBonus: 0
+  AttackSpeedBonus: 0
+  VitalityBonus: 0
+  CritBonus: 0
+  SpiritBonus: 0
+  EnduranceBonus: 0
+  StrengthBonus: 0
+  DexterityBonus: 0
+  IntelligenceBonus: 0
+  AgilityBonus: 0
+  ToughnessBonus: 0
+  HealthPercentBonus: 0
+  ManaPercentBonus: 0
+  StaminaPercentBonus: 0
+  AttackPercentBonus: 0
+  MagicAttackPercentBonus: 0
+  BowAttackPercentBonus: 0
+  DefensePercentBonus: 0
+  AttackSpeedPercentBonus: 0
+  VitalityPercentBonus: 0
+  CritPercentBonus: 0
+  SpiritPercentBonus: 0
+  EndurancePercentBonus: 0
+  StrengthPercentBonus: 0
+  DexterityPercentBonus: 0
+  IntelligencePercentBonus: 0
+  AgilityPercentBonus: 0
+  ToughnessPercentBonus: 0
+  gearType: 4
+  material: {fileID: 2100000, guid: 2d0328956fbadfc4ca2d08c43455a994, type: 2}
+  defense: 10
+  weight: 0
+  idle: {fileID: 0}
+  run: {fileID: 0}
+  walk: {fileID: 0}
+  swing1: {fileID: 0}
+  swing2: {fileID: 0}
+  block: {fileID: 0}
+  interact: {fileID: 0}
+  carryIdle: {fileID: 0}
+  carryRun: {fileID: 0}

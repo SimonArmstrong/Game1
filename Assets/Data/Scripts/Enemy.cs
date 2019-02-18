@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : Entity {
-    public GameObject[] drops;
-    public AudioClip deathSound;
+    public Item[] drops;
+    public SoundFont deathSound;
     public override void Start() {
         base.Start();
 
@@ -37,10 +37,11 @@ public class Enemy : Entity {
     public override void Die()
     {
         for (int i = 0; i < drops.Length; i++) {
-            Instantiate(drops[i], transform.position, Quaternion.identity);
+            InventoryPickup item = Instantiate(GameManager.instance.genericItemDropObject, transform.position, Quaternion.identity).GetComponent<InventoryPickup>();
+            item.item = drops[i];
         }
         if(deathSound != null)
-            Instantiate(GameManager.instance.genericSoundObject, transform.position, Quaternion.identity).GetComponent<AudioSource>().clip = deathSound;
+            Instantiate(GameManager.instance.genericSoundObject, transform.position, Quaternion.identity).GetComponent<SoundEffect>().soundFont = deathSound;
 
         GetComponent<Collider2D>().enabled = false;
         base.Die();

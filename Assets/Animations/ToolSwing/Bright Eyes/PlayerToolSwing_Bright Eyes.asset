@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: PlayerToolSwing_Bright Eyes
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: c51ac336f0101a44db1ee3c6b1c98697, type: 2}
+  - {fileID: 11400000, guid: f9296ece85a995b4fa64c6f6e208568e, type: 2}
+  - {fileID: 11400000, guid: 5cfdbf15b2b68714b8945aa47087ce10, type: 2}
+  - {fileID: 11400000, guid: 3567313f9e8b0be4cb69829bf7823606, type: 2}
+  hasSound: 0

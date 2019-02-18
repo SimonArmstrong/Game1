@@ -4,9 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 public class Dialogue {
-
     public DialogueData dialogueData;
-
     public Sentence[] sentences;
 
 }

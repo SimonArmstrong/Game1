@@ -13,12 +13,21 @@ public class TinkerAnimatorBasic : MonoBehaviour {
 	public bool done;
 
 	private bool isChild = false;
+    SpriteRenderer sr;
 
-	private void Start(){
+    private void Start(){
 		
 	}
 
-	private void SwitchFrames (){
+    private void OnValidate()
+    {
+        sr = GetComponent<SpriteRenderer>();
+        if (sr == null) sr = gameObject.AddComponent<SpriteRenderer>();
+        if(animations.Length > 0 && animations[0].sprites.Length > 0)
+            sr.sprite = animations[0].sprites[0];
+    }
+
+    private void SwitchFrames (){
 		// Reset frames if we've reached the end -- Creates Loop
 		if (frameIndex > animations [currentAnimation].sprites.Length - 1) {
 			if (destroyAfterPlayed)

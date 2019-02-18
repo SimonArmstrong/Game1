@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: base-male_Swing1
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 7ae6273bebfe2e148b2adb53d001cc0f, type: 2}
+  - {fileID: 11400000, guid: 8c53304262f7a0543a7a819cdbaefbdf, type: 2}
+  - {fileID: 11400000, guid: c14a718d5c99050469b187b9968ff582, type: 2}
+  - {fileID: 11400000, guid: 411e52579cf2d9240b509a974ba1ccce, type: 2}
+  hasSound: 1

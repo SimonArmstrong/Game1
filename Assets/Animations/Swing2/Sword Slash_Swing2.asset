@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: Sword Slash_Swing2
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 8d8e85c1e7ffb8f4db1da642a58f4cf5, type: 2}
+  - {fileID: 11400000, guid: 5b7682eedc4bbdf49bd62cc4ecca1d15, type: 2}
+  - {fileID: 11400000, guid: c15f49e1249d56b40b7bfea23fbfbf18, type: 2}
+  - {fileID: 11400000, guid: 17d2d625fa8cc0442af4a4c349e51be7, type: 2}
+  hasSound: 0

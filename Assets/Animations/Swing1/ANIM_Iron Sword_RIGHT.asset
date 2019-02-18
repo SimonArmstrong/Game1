@@ -13,14 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mname: 
   sprites:
-  - {fileID: 21300002, guid: 1faf10ae5db0a164195a5bf8d475afed, type: 3}
-  - {fileID: 21300010, guid: 1faf10ae5db0a164195a5bf8d475afed, type: 3}
-  - {fileID: 21300018, guid: 1faf10ae5db0a164195a5bf8d475afed, type: 3}
-  - {fileID: 21300026, guid: 1faf10ae5db0a164195a5bf8d475afed, type: 3}
-  - {fileID: 21300034, guid: 1faf10ae5db0a164195a5bf8d475afed, type: 3}
-  - {fileID: 21300042, guid: 1faf10ae5db0a164195a5bf8d475afed, type: 3}
-  - {fileID: 21300050, guid: 1faf10ae5db0a164195a5bf8d475afed, type: 3}
-  - {fileID: 21300058, guid: 1faf10ae5db0a164195a5bf8d475afed, type: 3}
+  - {fileID: 21300002, guid: 3ada854a7374afa4aa9b97e62ac9d4a4, type: 3}
+  - {fileID: 21300010, guid: 3ada854a7374afa4aa9b97e62ac9d4a4, type: 3}
+  - {fileID: 21300018, guid: 3ada854a7374afa4aa9b97e62ac9d4a4, type: 3}
+  - {fileID: 21300026, guid: 3ada854a7374afa4aa9b97e62ac9d4a4, type: 3}
+  - {fileID: 21300034, guid: 3ada854a7374afa4aa9b97e62ac9d4a4, type: 3}
+  - {fileID: 21300042, guid: 3ada854a7374afa4aa9b97e62ac9d4a4, type: 3}
   loop: 0
   timeBetweenFrames: 0.2
   sound: []

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: Mithril Boots_Tool Swing
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 477b7c1125c9353498539f3713163837, type: 2}
+  - {fileID: 11400000, guid: 4116c1e66a4ee974d91679978f890ed4, type: 2}
+  - {fileID: 11400000, guid: 7b5995498c678dd4492bd3dcd9342d20, type: 2}
+  - {fileID: 11400000, guid: f2a63bc3d625d6142a9059ef63a05f0d, type: 2}
+  hasSound: 0

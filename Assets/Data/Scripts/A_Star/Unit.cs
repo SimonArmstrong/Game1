@@ -5,19 +5,27 @@ using UnityEngine;
 public class Unit : MonoBehaviour {
 
     public Transform target;
-    float speed = 1.5f;
+    //float speed = 1.5f;
     //[SerializeField]
     Vector2[] path;
     int targetIndex;
     bool hasRequestedPath = false;
+    public bool flagForDeath;
     public StateController stateController;
+    
+    //private void Start()
+    //{
+    //}
+    
 
-    private void Start()
+    void OnEnable()
     {
         target = GameManager.instance.player.transform;
         stateController = GetComponent<StateController>();
+        flagForDeath = false;
     }
 
+    //Called every frame
     public void RequestPath()
     {
         if(!hasRequestedPath){
@@ -37,6 +45,7 @@ public class Unit : MonoBehaviour {
         hasRequestedPath = false;
         if (pathSuccessful && gameObject.activeSelf)
         {
+            //Debug.Log("New path requested");
             path = newPath;
             targetIndex = 0;
             StopCoroutine("FollowPath");

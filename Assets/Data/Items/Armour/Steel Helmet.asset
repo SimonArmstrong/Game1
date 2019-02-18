@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65ea448e4ab423644b730062b205571f, type: 3}
+  m_Name: Steel Helmet
+  m_EditorClassIdentifier: 
+  element: 0
+  id: 71de11e119b5d67409eae1b3502021b1
+  databaseID: steel-helmet
+  ItemName: Steel Helmet
+  iconAnim: {fileID: 11400000, guid: 43ca1a5da4e3bef45a8d5072f60729b7, type: 2}
+  value: 500
+  MaximumStacks: 1
+  anim:
+  - {fileID: 11400000, guid: 46f40ac48a6f7d641a0bce195a69e43f, type: 2}
+  - {fileID: 11400000, guid: 9efdb77ffb3cb6149a310e7eac7002c9, type: 2}
+  - {fileID: 11400000, guid: 674faa8d36bb7bc449961383429cf573, type: 2}
+  - {fileID: 11400000, guid: ca7c5d313fc09484e91fdeeaafae2887, type: 2}
+  - {fileID: 11400000, guid: 034a1fbde17ca0d48ab22d3e41021326, type: 2}
+  HealthBonus: 0
+  ManaBonus: 0
+  StaminaBonus: 0
+  AttackBonus: 0
+  MagicAttackBonus: 0
+  BowAttackBonus: 0
+  DefenseBonus: 0
+  AttackSpeedBonus: 0
+  VitalityBonus: 0
+  CritBonus: 0
+  SpiritBonus: 0
+  EnduranceBonus: 0
+  StrengthBonus: 0
+  DexterityBonus: 0
+  IntelligenceBonus: 0
+  AgilityBonus: 0
+  ToughnessBonus: 0
+  HealthPercentBonus: 0
+  ManaPercentBonus: 0
+  StaminaPercentBonus: 0
+  AttackPercentBonus: 0
+  MagicAttackPercentBonus: 0
+  BowAttackPercentBonus: 0
+  DefensePercentBonus: 0
+  AttackSpeedPercentBonus: 0
+  VitalityPercentBonus: 0
+  CritPercentBonus: 0
+  SpiritPercentBonus: 0
+  EndurancePercentBonus: 0
+  StrengthPercentBonus: 0
+  DexterityPercentBonus: 0
+  IntelligencePercentBonus: 0
+  AgilityPercentBonus: 0
+  ToughnessPercentBonus: 0
+  gearType: 0
+  material: {fileID: 2100000, guid: 2d0328956fbadfc4ca2d08c43455a994, type: 2}
+  defense: 5
+  weight: 0
+  idle: {fileID: 0}
+  run: {fileID: 0}
+  walk: {fileID: 0}
+  swing1: {fileID: 0}
+  swing2: {fileID: 0}
+  block: {fileID: 0}
+  interact: {fileID: 0}
+  carryIdle: {fileID: 0}
+  carryRun: {fileID: 0}

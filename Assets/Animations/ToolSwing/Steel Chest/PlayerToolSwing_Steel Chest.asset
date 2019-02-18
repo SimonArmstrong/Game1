@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: PlayerToolSwing_Steel Chest
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 607f4b846bbd2b246bc4ad441cc3a3fd, type: 2}
+  - {fileID: 11400000, guid: c214bab24bee0434389d7a7ed8c26e47, type: 2}
+  - {fileID: 11400000, guid: 2ca870f04c4478f47ae313a1209b5b25, type: 2}
+  - {fileID: 11400000, guid: 4d2b970577bc1b7438e0140d2198f2ac, type: 2}
+  hasSound: 0

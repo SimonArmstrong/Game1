@@ -12,7 +12,7 @@ public class PathRequestManager : MonoBehaviour {
 
     bool isProcessingPath;
 
-    static PathRequestManager instance;
+    public static PathRequestManager instance;
 
     private void Awake()
     {
@@ -25,6 +25,11 @@ public class PathRequestManager : MonoBehaviour {
         PathRequest newRequest = new PathRequest(pathStart, pathEnd, callback);
         instance.pathRequestQueue.Enqueue(newRequest);
         instance.TryProcessNext();
+    }
+
+    public void ClearQueue()
+    {
+        pathRequestQueue = new Queue<PathRequest>();
     }
 
     void TryProcessNext()

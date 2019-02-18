@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8e1581731a1d1646a712387b5eb745f, type: 3}
+  m_Name: God of Void
+  m_EditorClassIdentifier: 
+  element: 0
+  id: 21b7ba5ab594c0f47a9dbbb102d155ca
+  databaseID: sword-godofvoid
+  ItemName: God of Void
+  iconAnim: {fileID: 11400000, guid: 56e6aae00b6b3eb4699ac30883298d24, type: 2}
+  value: 100000
+  MaximumStacks: 1
+  anim: []
+  HealthBonus: 0
+  ManaBonus: 0
+  StaminaBonus: 0
+  AttackBonus: 38
+  MagicAttackBonus: 0
+  BowAttackBonus: 0
+  DefenseBonus: 0
+  AttackSpeedBonus: 0
+  VitalityBonus: 0
+  CritBonus: 0
+  SpiritBonus: 0
+  EnduranceBonus: 0
+  StrengthBonus: 0
+  DexterityBonus: 0
+  IntelligenceBonus: 0
+  AgilityBonus: 0
+  ToughnessBonus: 0
+  HealthPercentBonus: 0
+  ManaPercentBonus: 0
+  StaminaPercentBonus: 0
+  AttackPercentBonus: 100
+  MagicAttackPercentBonus: 0
+  BowAttackPercentBonus: 0
+  DefensePercentBonus: 0
+  AttackSpeedPercentBonus: 0
+  VitalityPercentBonus: 0
+  CritPercentBonus: 0
+  SpiritPercentBonus: 0
+  EndurancePercentBonus: 0
+  StrengthPercentBonus: 0
+  DexterityPercentBonus: 0
+  IntelligencePercentBonus: 0
+  AgilityPercentBonus: 0
+  ToughnessPercentBonus: 0
+  gearType: 5
+  material: {fileID: 2100000, guid: 2d0328956fbadfc4ca2d08c43455a994, type: 2}
+  dcUp: {fileID: 1540566784031230, guid: ef1dad65e7441d648b08a964e6055bcb, type: 2}
+  dcDown: {fileID: 1963598708414614, guid: 9fd867f30e0dda44aaf6bab8c5cd47d6, type: 2}
+  dcLeft: {fileID: 1496280624513202, guid: fb5273d3a99f0a04e9f064487ff2fd5e, type: 2}
+  dcRight: {fileID: 1360204029617262, guid: 37f33d93a5704534cbdec121ca1648bf, type: 2}
+  projectile: {fileID: 0}
+  effectObject: {fileID: 0}
+  otherObject: {fileID: 0}
+  attackSpeed: 5
+  conditions: []

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: PlayerToolSwing_Steel Helm
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: cc7fb66555d51b34e9abd0c78f97af04, type: 2}
+  - {fileID: 11400000, guid: 44eb2812e27d57c49b7c7edeed726742, type: 2}
+  - {fileID: 11400000, guid: 59d89c7122b97c641a8bb7bf68214e8c, type: 2}
+  - {fileID: 11400000, guid: 643f137996101a349b015860321f2ed8, type: 2}
+  hasSound: 0

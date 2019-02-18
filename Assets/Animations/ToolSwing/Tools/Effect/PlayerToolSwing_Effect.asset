@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: PlayerToolSwing_Effect
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 0f7f4e08f03624a4585d4592d7a892b7, type: 2}
+  - {fileID: 11400000, guid: 8b7e9005861f25a47a1136bb8b4d0740, type: 2}
+  - {fileID: 11400000, guid: 700ddad5f5b65be47b75c9d4f60a9ef0, type: 2}
+  - {fileID: 11400000, guid: 5c29078911692444a92c1cb1ea5c55d8, type: 2}
+  hasSound: 0

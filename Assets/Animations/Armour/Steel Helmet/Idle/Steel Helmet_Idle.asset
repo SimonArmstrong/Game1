@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: Steel Helmet_Idle
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 9b305a77309548d4c9fdc3c1e258f617, type: 2}
+  - {fileID: 11400000, guid: 426a02cd27867e147bb3c1b6ec681ed4, type: 2}
+  - {fileID: 11400000, guid: 1bbcbb0b2c12892488134b0a808447f8, type: 2}
+  - {fileID: 11400000, guid: 830403bec71b1504396bf7359410782a, type: 2}
+  hasSound: 0

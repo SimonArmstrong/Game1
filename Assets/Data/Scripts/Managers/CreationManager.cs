@@ -66,7 +66,7 @@ public class CreationManager : MonoBehaviour {
         if (idObj != null)
         {
             if (idObj.itemID != -1)
-                modelPart.animations[(int)ANIMATIONS.IDLE] = ((Armour)db.data[idObj.itemID]).idle;
+                modelPart.animations[(int)ANIMATIONS.IDLE] = ((Armour)db.items[idObj.itemID]).idle;
             else
                 modelPart.animations[(int)ANIMATIONS.IDLE] = null;
         }
@@ -108,7 +108,7 @@ public class CreationManager : MonoBehaviour {
         //PlayerPrefs.SetString("playerName", playerName);  
 
         GameObject p = Instantiate(characterController);
-        p.GetComponent<Player>().character = character;
+        //p.GetComponent<Player>().character = character;
 
         NetworkManager.singleton.playerPrefab = p;
 

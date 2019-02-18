@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ItemDrop : MonoBehaviour {
     public Item item;
-    public AudioClip pickupSound;
+    public SoundFont pickupSound;
 
     private void Start()
     {
-        GetComponent<SpriteRenderer>().sprite = item.icon;
+        GetComponent<SpriteRenderer>().sprite = item.iconAnim.sprites[0];
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -16,7 +16,7 @@ public class ItemDrop : MonoBehaviour {
         Player p = collision.GetComponent<Player>();
         if (p != null) {
             p.GiveItem(item);
-            Instantiate(GameManager.instance.genericSoundObject, transform.position, Quaternion.identity).GetComponent<AudioSource>().clip = pickupSound;
+            Instantiate(GameManager.instance.genericSoundObject, transform.position, Quaternion.identity).GetComponent<AudioSource>().clip = pickupSound.GetClip();
             Cutscene c = Instantiate(GameManager.instance.genericCutsceneObject).GetComponent<Cutscene>();
             GetComponent<DialogueTrigger>().TriggerDialogue();
             c.cam.actor = Camera.main.gameObject;

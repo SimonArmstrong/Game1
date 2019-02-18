@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Interactable
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -29,8 +30,8 @@ TagManager:
   - NPC
   - Enemy
   - DungeonDoor
-  - 
-  - 
+  - HurtBox
+  - RaycastCheck
   - 
   - 
   - 
@@ -47,4 +48,10 @@ TagManager:
     locked: 0
   - name: Character
     uniqueID: 2473135733
+    locked: 0
+  - name: Foreground
+    uniqueID: 2018536835
+    locked: 0
+  - name: Always Above
+    uniqueID: 216028161
     locked: 0

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: Mithril Helmet_Swing 1
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: f818236037f0ba941aabc4e7f2a75124, type: 2}
+  - {fileID: 11400000, guid: a79c1f202a7f0ac40968b32af6ee382b, type: 2}
+  - {fileID: 11400000, guid: 84a1bbc911867a54d9626265eb31e311, type: 2}
+  - {fileID: 11400000, guid: feb47004f5343bd4cb07a4af73f7ce3f, type: 2}
+  hasSound: 0

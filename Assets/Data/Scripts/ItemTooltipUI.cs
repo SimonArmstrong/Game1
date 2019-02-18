@@ -10,7 +10,7 @@ public class ItemTooltipUI : MonoBehaviour {
 
     public void Update()
     {
-        itemImage.sprite = item.icon;
+        itemImage.sprite = item.iconAnim.sprites[0];
         nameText.text = item.name;
     }
 }

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: Rhodonite Sword_Swing2
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 460746ea3dd27c04ea70ccf253614876, type: 2}
+  - {fileID: 11400000, guid: 7475fce55d6050346819016c7087349a, type: 2}
+  - {fileID: 11400000, guid: 1ac6a650e1c0b0c4281fd79cea0e9f1e, type: 2}
+  - {fileID: 11400000, guid: 720a218a6908b3943ab2f79349c90f5b, type: 2}
+  hasSound: 0

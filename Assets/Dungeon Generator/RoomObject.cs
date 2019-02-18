@@ -14,16 +14,20 @@ namespace DunGen
         public List<Transform> eastDoors = new List<Transform>();
         public List<Transform> westDoors = new List<Transform>();
 
+        public SpawnPoint[] entitySpawnPoints = new SpawnPoint[0];
+
         public List<Transform> raycastBounds = new List<Transform>();
         public GridScript AIGrid;
 
         public GameObject colliderTransform;
         public GameObject mapVisuals;
 
+        public Spawner entitySpawner;
         public EnemySpawner spawner;
 
         public bool isActiveRoom = false;
         bool initialized = false;
+
 
         private void Update()
         {
@@ -38,35 +42,9 @@ namespace DunGen
             }
 
             //return;
-            for (int i = 0; i < transform.childCount; i++)
-            {
-                SpriteRenderer sr = transform.GetChild(i).GetComponent<SpriteRenderer>();
-                if (sr != null)
-                    sr.enabled = isActiveRoom;
-            }
-            GetComponent<SpriteRenderer>().enabled = isActiveRoom;
-
-            for (int i = 0; i < northDoors.Count; i++)
-            {
-                northDoors[i].GetComponent<Collider2D>().enabled = isActiveRoom;
-            }
-            for (int i = 0; i < southDoors.Count; i++)
-            {
-                southDoors[i].GetComponent<Collider2D>().enabled = isActiveRoom;
-            }
-            for (int i = 0; i < eastDoors.Count; i++)
-            {
-                eastDoors[i].GetComponent<Collider2D>().enabled = isActiveRoom;
-            }
-            for (int i = 0; i < westDoors.Count; i++)
-            {
-                westDoors[i].GetComponent<Collider2D>().enabled = isActiveRoom;
-            }
-
-            colliderTransform.SetActive(isActiveRoom);
-
-            if (!isActiveRoom)
-                initialized = false;
+            
+            //if (!isActiveRoom)
+            //    initialized = false;
 
             if (isActiveRoom && !initialized) {
                 //AIGrid.Init();
@@ -75,14 +53,96 @@ namespace DunGen
 
         }
 
-        private void OnEnable()
-        {
+        public void OnRoomEnter() {
+
+            isActiveRoom = true;
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                SpriteRenderer sr = transform.GetChild(i).GetComponent<SpriteRenderer>();
+                if (sr != null)
+                    sr.enabled = isActiveRoom;
+            }
+            GetComponent<SpriteRenderer>().enabled = isActiveRoom;
+
+            colliderTransform.SetActive(isActiveRoom);
+
+            #region SetDoorsTrue
+            for (int i = 0; i < northDoors.Count; i++)
+            {
+                northDoors[i].GetComponent<Collider2D>().enabled = true;
+            }
+            for (int i = 0; i < southDoors.Count; i++)
+            {
+                southDoors[i].GetComponent<Collider2D>().enabled = true;
+            }
+            for (int i = 0; i < eastDoors.Count; i++)
+            {
+                eastDoors[i].GetComponent<Collider2D>().enabled = true;
+            }
+            for (int i = 0; i < westDoors.Count; i++)
+            {
+                westDoors[i].GetComponent<Collider2D>().enabled = true;
+            }
+            #endregion
+
+            GetComponent<GridScript>().Init();
+            PathRequestManager.instance.ClearQueue();
+            Camera.main.GetComponent<FollowTarget>().shootRays = false;
+            mapVisuals.SetActive(true);
+            if (entitySpawner == null) return;
+            /*
+            foreach (EnemyCollection enemyCollection in entitySpawner.enemyTypes) {
+                GameManager.instance.SpawnEntities (enemyCollection.spawnPoints);
+            }
+            */
         }
 
-        private void Start()
+        public void OnRoomExit()
         {
-            //gameObject.SetActive(false);
-            AIGrid = GameObject.Find("A_Star_Grid").GetComponent<GridScript>();
+            isActiveRoom = false;
+
+            if(GameManager.instance.activeEnemies.Count > 0)
+            {
+                foreach (GameObject go in GameManager.instance.activeEnemies) {
+                    if(go != null && go.activeSelf) go.SetActive(false);
+                }
+            }
+
+            //GameManager.instance.ClearAllActiveEntities();
+            //PathRequestManager.instance.ClearQueue();
+
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                SpriteRenderer sr = transform.GetChild(i).GetComponent<SpriteRenderer>();
+                if (sr != null)
+                    sr.enabled = isActiveRoom;
+            }
+            GetComponent<SpriteRenderer>().enabled = isActiveRoom;
+
+            colliderTransform.SetActive(isActiveRoom);
+
+            #region SetDoorsFalse
+            for (int i = 0; i < northDoors.Count; i++)
+            {
+                northDoors[i].GetComponent<Collider2D>().enabled = false;
+            }
+            for (int i = 0; i < southDoors.Count; i++)
+            {
+                southDoors[i].GetComponent<Collider2D>().enabled = false;
+            }
+            for (int i = 0; i < eastDoors.Count; i++)
+            {
+                eastDoors[i].GetComponent<Collider2D>().enabled = false;
+            }
+            for (int i = 0; i < westDoors.Count; i++)
+            {
+                westDoors[i].GetComponent<Collider2D>().enabled = false;
+            }
+            #endregion
+
+            GetComponent<GridScript>().ClearGrid();
         }
+
+        
     }
 }

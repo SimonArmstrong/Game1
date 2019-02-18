@@ -31,13 +31,16 @@ public class Cutscene : MonoBehaviour {
     public bool fadeIn;
     public bool fadeOut;
 
+    public bool done = false;
+
     public Item reward;
 
     private Vector3 target;
 
     public AudioMixerSnapshot snapshot;
     public List<AudioMixerGroup> affectedChannels = new List<AudioMixerGroup>();
-
+    public delegate void EventHandle();
+    public List<EventHandle> handle = new List<EventHandle>();
     private GameStates prev_GameState;
 
     private void Start()
@@ -51,12 +54,18 @@ public class Cutscene : MonoBehaviour {
         {
             if (reward != null) Instantiate(GameManager.instance.genericItemDropObject, transform.position, Quaternion.identity);
             for (int i = 0; i < actors.Count; i++) {
+                
                 Destroy(actors[i].actor);
             }
             if (fadeOut)
                 CutsceneManager.instance.FadeToBlack();
 
+            for (int i = 0; i < handle.Count; i++) {
+                handle[i]();
+            }
             Destroy(gameObject);
+            
+            //done = true;
             currentShot = 0;
         }
 
@@ -68,11 +77,11 @@ public class Cutscene : MonoBehaviour {
         }
             //CutsceneManager.instance.FadeFromBlack();
 
-        target = cam.positions[currentShot].position;
-        target.z = -10;
-        cam.actor.transform.localPosition = Vector3.Lerp(
-            cam.actor.transform.localPosition, target,
-            Time.unscaledDeltaTime * cam.transitionTimes[currentShot]);
+        //target = cam.positions[currentShot].position;
+        //target.z = -10;
+        //cam.actor.transform.localPosition = Vector3.Lerp(
+        //    cam.actor.transform.localPosition, target,
+        //    Time.unscaledDeltaTime * cam.transitionTimes[currentShot]);
 
         if (!timerBegun) {
             timerBegun = true;
