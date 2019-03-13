@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 114825872595016470}
   - component: {fileID: 50098435405271518}
   - component: {fileID: 70677749838582104}
-  - component: {fileID: 81594405836216070}
   - component: {fileID: 114405000812940238}
   m_Layer: 10
   m_Name: Character Controller
@@ -672,13 +671,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.015625, y: -0.37}
   m_Size: {x: 0.32, y: 0.33}
   m_Direction: 0
---- !u!81 &81594405836216070
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1009959657879870}
-  m_Enabled: 1
 --- !u!95 &95663442992982674
 Animator:
   serializedVersion: 3
@@ -1350,7 +1342,7 @@ MonoBehaviour:
   canCancelDodge: 0
   canCancelAttack: 0
   canComboAttack: 0
-  attackTowardsMouse: 0
+  attackTowardsMouse: 1
   dodgeTowardsMouse: 0
   allowChargeAttack: 0
 --- !u!114 &114902462201158820

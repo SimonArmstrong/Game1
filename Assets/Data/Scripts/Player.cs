@@ -203,8 +203,7 @@ public class Player : Entity {
                 model.toolModel.GetComponent<SpriteRenderer>().material = harvestItem.material;
         }
     }
-
-
+    
     private void OnEnable()
     {
         //invUI = InventoryUI.instance;
@@ -479,7 +478,7 @@ public class Player : Entity {
         }
     }
 
-    private void HandleComsumption() {
+    private void HandleConsumption() {
         if (isAttacking) return;
         if (isDodging) return;
         if (isStunned) return;
@@ -611,7 +610,6 @@ public class Player : Entity {
         model.SwitchFrames();
     }
 
-
     public override void FixedUpdate () {
 
         RefreshInventory();
@@ -643,7 +641,7 @@ public class Player : Entity {
         HandleAttacks();
         HandleMovement();
         HandleShooting();
-        HandleComsumption();
+        HandleConsumption();
 
         model.sortingOrder = -(int)(transform.position.y * GameManager.instance.sortingFidelity);
         //HealthHUD.instance.UpdateHearts();

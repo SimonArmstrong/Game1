@@ -26,7 +26,12 @@ public class DamageCollider : MonoBehaviour {
 
         lifetime -= Time.deltaTime;
         if (lifetime <= 0)
+        {
+            if (adc != null) {
+                adc.hitInfo.Clear();
+            }
             Destroy(gameObject);
+        }
     }
 
     public virtual void OnTriggerEnter2D(Collider2D collision)

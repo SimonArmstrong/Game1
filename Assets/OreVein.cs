@@ -7,8 +7,7 @@ public class OreVein : EntityNEW {
     public Item ore;
     public int amount;
 
-
-
+    
     public override void OnHit(float p_amt)
     {
         durability--;

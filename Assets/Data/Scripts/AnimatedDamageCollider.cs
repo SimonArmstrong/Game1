@@ -6,7 +6,6 @@ public class Colliders {
     public List<GameObject> colliders = new List<GameObject>();
 }
 
-
 public class AnimatedDamageCollider : MonoBehaviour {
     public List<Colliders> colliders = new List<Colliders>();
     public Entity owner;

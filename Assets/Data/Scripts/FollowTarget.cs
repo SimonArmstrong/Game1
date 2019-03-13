@@ -80,34 +80,17 @@ public class FollowTarget : MonoBehaviour {
         w = Camera.main.orthographicSize * aspect * 2;
         h = Camera.main.orthographicSize * 2;
 
-        //Debug.DrawRay(targetPos,          Vector3.up    * h / 2, Color.green);
-        //Debug.DrawRay(targetPos,          Vector3.down  * h / 2, Color.green);
-        //Debug.DrawRay(targetPos,          Vector3.left  * w / 2, Color.blue);
-        //Debug.DrawRay(targetPos,          Vector3.right * w / 2, Color.blue);
-        //Debug.DrawRay(transform.position, Vector3.up    * h / 2, Color.magenta);
-        //Debug.DrawRay(transform.position, Vector3.down  * h / 2, Color.magenta);
-        //Debug.DrawRay(transform.position, Vector3.left  * w / 2, Color.red);
-        //Debug.DrawRay(transform.position, Vector3.right * w / 2, Color.red);
         shootRays = true;
         if (shootRays)
         {
+            // Shoot rays to detect collisions
             ShootRays();
-            //targetPos += (transform.position - targetPos);
+
+            // Determine the total destination from the data generated from the rays
             Vector3 offsetPos = new Vector3((maxX + minX), (maxY + minY), 0);
-
             clampPos = targetPos + offsetPos;
-
-            //Debug.DrawRay(clampPos, Vector3.up, Color.yellow);
-            //Debug.DrawRay(clampPos, Vector3.down, Color.yellow);
-            //Debug.DrawRay(clampPos, Vector3.left, Color.yellow);
-            //Debug.DrawRay(clampPos, Vector3.right, Color.yellow);
-
             Vector3 totalPos = Vector3.Lerp(transform.position, clampPos, Time.deltaTime * lerpSpeed);
-
-            //totalPos.x = targetPos + new Vector3((maxX + minX) / 2, (maxY + minY) / 2, 0);
-            //totalPos = targetPos + new Vector3((maxX + minX) / 2, (maxY + minY) / 2, 0);
             GetComponent<PixelPerfectCam>().MoveTo(totalPos);
-            //transform.position = totalPos;
         }
         else {
             GetComponent<PixelPerfectCam>().MoveTo(Vector3.Lerp(transform.position, targetPos, Time.deltaTime * lerpSpeed));

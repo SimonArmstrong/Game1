@@ -126,48 +126,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 969d27f39b752e24a8ffdc58e67031d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: []
   anim: {fileID: 95071662441492062}
   openSound: {fileID: 0}
-  itemSlots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  chestSlotParent: {fileID: 0}
+  items: {fileID: 0}
   isOpen: 0
+  player: {fileID: 0}
 --- !u!212 &212085279688138878
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -202,7 +165,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 82
+  m_SortingOrder: 174
   m_Sprite: {fileID: 21300000, guid: 2f4eb6603cbd0ad408f8b2716297c4df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

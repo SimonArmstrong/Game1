@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class WorldDoor : MonoBehaviour {
     public int sceneID;
+    public int portalID;
+    public int connectedPortalID;
 
     Cutscene go;
     bool cutsceneStart = false;
