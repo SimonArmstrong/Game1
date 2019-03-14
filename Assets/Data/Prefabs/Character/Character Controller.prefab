@@ -1333,8 +1333,8 @@ MonoBehaviour:
   comboWindowLength: 0.1
   equippedWeapon: {fileID: 0}
   harvestItem: {fileID: 11400000, guid: 4c568a49cff06e24bb8c7aceb082ea85, type: 2}
-  dashDistance: 1
-  rollSpeed: 10
+  dashDistance: 3
+  rollSpeed: 8
   isAttacking: 0
   isDodging: 0
   isSwingingTool: 0

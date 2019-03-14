@@ -20,10 +20,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/32x32.unity
     guid: 69507f97eb93f384e88cd41995284962
-  - enabled: 1
-    path: Assets/DevArea.unity
+  - enabled: 0
+    path: Assets/Scenes/DevArea.unity
     guid: 33ba1f978e2afd444a14a9b41796aaae
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Haunted Mansion Dungeon.unity
     guid: 80dfa264e709ab645abc7cc4671a7629
+  - enabled: 1
+    path: Assets/testt.unity
+    guid: f40b2a6363556314cae65927ae6e4e98
   m_configObjects: {}

@@ -245,15 +245,17 @@ public class Player : Entity {
         {
             isDodging = true;
             storedDodgeInput = false;
-            rollPosition = transform.position + (dodgeTowardsMouse ? (Vector3)aimDir * dashDistance : (Vector3)dirVec * dashDistance);
+            rollPosition = transform.position + (dodgeTowardsMouse ? (Vector3)aimDir.normalized * dashDistance : (Vector3)dirVec.normalized * dashDistance);
+            Debug.DrawLine(transform.position, rollPosition);
         }
+
         ////////////////
         // Interrupts // 
         ////////////////
 
         if (!isDodging) return;
 
-        transform.position += (rollPosition - transform.position).normalized * Time.deltaTime * rollSpeed;
+        transform.position += (rollPosition - transform.position) * Time.deltaTime * rollSpeed;
 
         model.frameIndex = 0;
         //GetComponent<Collider2D>().enabled = false;
