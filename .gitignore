@@ -1,7 +1,4 @@
-*.meta
 *.pdb
-*.userprefs
-
 *.csproj
 
 *.pidb
@@ -11,8 +8,6 @@
 *.sln
 
 *.user
-
-*.unityproj
 
 *.booproj
 .vs/
