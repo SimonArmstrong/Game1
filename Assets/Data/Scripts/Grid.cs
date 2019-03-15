@@ -46,13 +46,16 @@ public class Grid : MonoBehaviour {
                 result = gridPoints[i];
             }
         }
+        if (debug)
+        {
+            for (int i = 0; i < gridPoints.Count; i++)
+            {
+                if (i != nearestIndex)
+                    debugObjInstances[i].GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0f);
+            }
 
-        for (int i = 0; i < gridPoints.Count; i++) {
-            if (i != nearestIndex)
-                debugObjInstances[i].GetComponent<SpriteRenderer>().color = Color.white;
+            debugObjInstances[nearestIndex].GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
         }
-
-        debugObjInstances[nearestIndex].GetComponent<SpriteRenderer>().color = Color.red;
         nearestGridPoint = result;
         return result;
     }

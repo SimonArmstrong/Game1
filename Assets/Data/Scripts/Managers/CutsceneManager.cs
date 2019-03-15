@@ -33,6 +33,10 @@ public class CutsceneManager : MonoBehaviour {
         //white = ScreenFade.instance.GetComponent<Image>();
     }
 
+    public void OnSceneLoad() {
+
+    }
+
     public void FadeToWhite() {
         white.color = new Color(1, 1, 1, 0);
         beginFadeToWhite = true;
@@ -55,18 +59,18 @@ public class CutsceneManager : MonoBehaviour {
 
     private void Update() {
         if (beginFadeFromBlack) {
-            white.color = Color.Lerp(white.color, new Color(0, 0, 0, 0), Time.deltaTime * 2);
+            white.color = Color.Lerp(white.color, new Color(0, 0, 0, 0), Time.unscaledDeltaTime * 2);
         }
         if (beginFadeFromWhite) {
-            white.color = Color.Lerp(white.color, new Color(1, 1, 1, 0), Time.deltaTime * 2);
+            white.color = Color.Lerp(white.color, new Color(1, 1, 1, 0), Time.unscaledDeltaTime * 2);
         }
         if (beginFadeToBlack)
         {
-            white.color = Color.Lerp(white.color, new Color(1, 1, 1, 1), Time.deltaTime * 2);
+            white.color = Color.Lerp(white.color, new Color(0, 0, 0, 1), Time.unscaledDeltaTime * 2);
         }
         if (beginFadeToWhite)
         {
-            white.color = Color.Lerp(white.color, new Color(1, 1, 1, 1), Time.deltaTime * 2);
+            white.color = Color.Lerp(white.color, new Color(1, 1, 1, 1), Time.unscaledDeltaTime * 2);
         }
     }
 }

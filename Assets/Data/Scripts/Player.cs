@@ -218,7 +218,7 @@ public class Player : Entity {
 
     private void OnSceneLoad(Scene scene, LoadSceneMode loadSceneMode)
     {
-        ScreenFade.instance.color = new Color(0, 0, 0, 0);
+
     }
 
     private void HandleDodge()

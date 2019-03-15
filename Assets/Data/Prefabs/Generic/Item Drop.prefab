@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114788142566629630}
   - component: {fileID: 95001102515103820}
   m_Layer: 0
-  m_Name: Item Drop
+  m_Name: Steel Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

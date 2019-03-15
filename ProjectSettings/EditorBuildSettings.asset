@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/PlayerSpawnerScene.unity
     guid: 4f1ffea8ecf13a94b8a2761ed6fd07bf
   - enabled: 0
-    path: Assets/Scenes/small room.unity
-    guid: 0e679863ec3cd994bb4acab093bc8360
-  - enabled: 0
     path: Assets/Scenes/32x32.unity
     guid: 69507f97eb93f384e88cd41995284962
   - enabled: 0
@@ -29,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/testt.unity
     guid: f40b2a6363556314cae65927ae6e4e98
+  - enabled: 1
+    path: Assets/Scenes/small room.unity
+    guid: 0e679863ec3cd994bb4acab093bc8360
   m_configObjects: {}
