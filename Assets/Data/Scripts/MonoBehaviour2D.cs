@@ -5,7 +5,9 @@ using UnityEngine;
 public class MonoBehaviour2D : MonoBehaviour {
     public LayerShadow shadow;
     public float height2D = 0;
-    public int shadowOffset = -7;
+    public float shadowHeightFineOffset = 0;
+    public int shadowHeightUnitOffset = 0;
+    public int shadowLayerOffset = -7;
     
     public void OnValidate()
     {
@@ -23,8 +25,8 @@ public class MonoBehaviour2D : MonoBehaviour {
             shadow = Instantiate(GameManager.instance.genericShadowObject, transform.position, Quaternion.identity).GetComponent<LayerShadow>();
         }
 
-        shadow.offset = shadowOffset;
+        shadow.offset = shadowLayerOffset;
         shadow.target = transform;
-        shadow.height2D = height2D;
+        shadow.height2D = height2D + (shadowHeightUnitOffset / 25) + (shadowHeightFineOffset / 25);
     }
 }

@@ -321,7 +321,9 @@ public class Player : Entity {
         //TODO: Attack speed = weaponSpeed + ( DEX x 0.2 ) + ( STR x 0.2 ) ???
         model.animSpeedModifier = equippedWeapon.attackSpeed * (1 + (Strength.Value * 0.01f));
 
-        if (model.baseModel.currentAnimation != combonum) model.ChangeAnimation(combonum); // Attack anim
+        if (model.baseModel.currentAnimation != combonum)
+            model.ChangeAnimation(combonum); // Attack anim
+
         model.CalculateDirection(swingDirection);
         model.UpdateFrames();
 
@@ -612,6 +614,20 @@ public class Player : Entity {
         model.SwitchFrames();
     }
 
+    public void Interrupt() {
+        isDodging = false;
+        isAttacking = false;
+        isSwingingTool = false;
+    }
+
+    public override void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (isDodging) {
+            Debug.Log("Interrupt");
+            Interrupt();
+        }
+        base.OnCollisionEnter2D(collision);
+    }
     public override void FixedUpdate () {
 
         RefreshInventory();

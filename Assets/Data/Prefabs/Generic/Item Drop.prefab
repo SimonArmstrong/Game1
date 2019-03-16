@@ -90,7 +90,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shadow: {fileID: 0}
   height2D: 0.64
-  shadowOffset: -19
+  shadowHeightFineOffset: 0
+  shadowHeightUnitOffset: 0
+  shadowLayerOffset: -7
   item: {fileID: 11400000, guid: 1b9321992d59f2f449e02bde0672cb80, type: 2}
   sound: {fileID: 8300000, guid: 23b5d4acb0f361c45b89b87a595a18f4, type: 3}
   waitTime: 1
@@ -121,7 +123,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2d0328956fbadfc4ca2d08c43455a994, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

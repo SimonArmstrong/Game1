@@ -9,6 +9,8 @@ public class Bird : EntityNEW {
 
     float n, w;
     float randY, randX;
+
+    float lifetime = 60;
     public void Start()
     {
         randX = Random.Range(-100f, 100f);
@@ -27,6 +29,8 @@ public class Bird : EntityNEW {
 
     public override void Update()
     {
+        lifetime -= Time.deltaTime;
+        if (lifetime <= 0) Kill();
         n += Time.deltaTime;
         w -= Time.deltaTime;
 

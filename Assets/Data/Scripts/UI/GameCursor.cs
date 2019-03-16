@@ -53,7 +53,6 @@ public class GameCursor : MonoBehaviour {
         if (item == null) return prevItem;
         if (item.item == null) return prevItem;
 
-
         instance.itemImage.sprite = instance.heldItem.item.iconAnim.sprites[0];
         instance.itemImage.color = new Color(1, 1, 1, 1);
 
@@ -76,6 +75,7 @@ public class GameCursor : MonoBehaviour {
         ItemData newItem = new ItemData(item.item, amount);
         ItemData itemRemainder = new ItemData(item.item, item.amount - amount);
 
+        if (itemRemainder.amount <= 0) itemRemainder = null;
 
         instance.itemImage.sprite = instance.heldItem.item.iconAnim.sprites[0];
         instance.itemImage.color = new Color(1, 1, 1, 1);

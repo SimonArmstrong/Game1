@@ -40,6 +40,11 @@ public class DamageCollider : MonoBehaviour {
         if (e != null) {
             if (e != owner)
             {
+                if (adc != null) {
+                    for (int i = 0; i < adc.hitInfo.Count; i++) {
+                        if (adc.hitInfo[i] == e.gameObject) return;
+                    }
+                }
                 if (Mathf.Abs((height - e.height2D)) <= heightBonus)
                 {
                     // We can change total damage recieved here!!!!

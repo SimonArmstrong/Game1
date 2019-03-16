@@ -30,6 +30,7 @@ public class AnimatedDamageCollider : MonoBehaviour {
             {
                 DamageCollider dc = colliders[currentCombo].colliders[i].GetComponent<DamageCollider>();
                 dc.owner = owner;
+                dc.adc = this;
                 dc.damage = damage;
                 dc.height = height;
                 if (conditions.Count > 0)

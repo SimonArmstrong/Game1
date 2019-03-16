@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grass : Entity {
+public class Grass : EntityNEW {
     [System.Serializable]
     public class Drop {
         public Item item;
@@ -25,13 +25,16 @@ public class Grass : Entity {
         }
     }
 
-    public override void Die()
+    public override void OnHit(float p_amt) {
+        Die();
+    }
+
+    public void Die()
     {
         if (dropped != true)
         {
             DropRandomItem();
         }
-
 
         GetComponent<TinkerAnimatorBasic>().currentAnimation = 1;
         GetComponent<TinkerAnimatorBasic>().frameIndex = 0;

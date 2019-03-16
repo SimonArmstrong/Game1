@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4008270621388302}
-  - component: {fileID: 58214659886811988}
+  - component: {fileID: 61336430687739436}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -67,28 +67,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1914676844709948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9, y: 0, z: 0}
+  m_LocalPosition: {x: 8.25, y: 2.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4008270621388302}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58214659886811988
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1950916480621410}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.03}
-  serializedVersion: 2
-  m_Radius: 0.18
 --- !u!58 &58981365612862066
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -104,6 +89,31 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.03}
   serializedVersion: 2
   m_Radius: 0.18
+--- !u!61 &61336430687739436
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1950916480621410}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.022351742, y: -0.0059603453}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.51422596, y: 0.39203715}
+  m_EdgeRadius: 0
 --- !u!114 &114435100355609980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca617fbe38124004985c30b4ff32c5d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: -33
+  offset: -20
 --- !u!114 &114664971298145924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,31 +158,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shadow: {fileID: 0}
   height2D: 0
-  shadowOffset: -13
-  model: {fileID: 0}
-  mp: 0
-  hp: 0
-  attributes:
-    maxHP: 1
-    maxMP: 0
-    moveSpeed: 0
-    swimSpeed: 0
-  conditions: []
-  isStunned: 0
-  conditionEffects: []
-  conditionDurations: []
-  conditionTicks: []
-  dirVec: {x: 0, y: 0}
-  direction: 0
-  rootMotionSpeed: 1
-  rb: {fileID: 0}
-  objPoolTag: 
-  unit: {fileID: 0}
-  drops:
-  - item: {fileID: 0}
-    dropChance: 0.1
-  - item: {fileID: 0}
-    dropChance: 0.1
+  shadowHeightFineOffset: 8.6
+  shadowHeightUnitOffset: 0
+  shadowLayerOffset: -31
+  drops: []
   dropped: 0
 --- !u!212 &212342746033867276
 SpriteRenderer:
@@ -208,7 +197,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -33
+  m_SortingOrder: -245
   m_Sprite: {fileID: 21300000, guid: 248788a3a519b7a4cbd4799c21ad2168, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Grid : MonoBehaviour {
 
-    private static List<Vector3> gridPoints = new List<Vector3>();
+    public List<Vector3> gridPoints = new List<Vector3>();
 
     public Vector3 nearestGridPoint;
 
