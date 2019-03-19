@@ -117,6 +117,7 @@ public class Model : MonoBehaviour {
     }
 
     public void ChangeAnimation(int animID) {
+        frameIndex = 0;
         if (baseModel != null) baseModel.currentAnimation = animID;
         if (hairModel != null) hairModel.currentAnimation = animID;
         if (hatModel != null) hatModel.currentAnimation = animID;
@@ -127,6 +128,7 @@ public class Model : MonoBehaviour {
         if (weapon1Model != null) weapon1Model.currentAnimation = animID;
         if (weapon2Model != null) weapon2Model.currentAnimation = animID;
         if (toolModel != null) toolModel.currentAnimation = animID;
+        SwitchFrames();
     }
 
     public void SwitchFrames() {

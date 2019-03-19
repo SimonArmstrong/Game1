@@ -55,7 +55,7 @@ public class DamageCollider : MonoBehaviour {
                     if (!doesPierce)
                     {
                         gameObject.SetActive(false);
-                        //Destroy(gameObject);
+                        if (adc == null) Destroy(gameObject);
                     }
                     if (adc != null)
                         adc.hitInfo.Add(e.gameObject);

@@ -257,7 +257,7 @@ public class Player : Entity {
 
         transform.position += (rollPosition - transform.position) * Time.deltaTime * rollSpeed;
 
-        model.frameIndex = 0;
+        //model.frameIndex = 0;
         //GetComponent<Collider2D>().enabled = false;
 
         dirVec = Vector3.zero;
@@ -299,7 +299,7 @@ public class Player : Entity {
         if ((attackInput && !isAttacking) || (storedAttackInput && !isAttacking))
         {
             isAttacking = true;
-            model.frameIndex = 0;
+            //model.frameIndex = 0;
             model.SwitchFrames();
             model.ResetFrameTimer();
             swingDirection = attackTowardsMouse ? aimDir : dirVec;
@@ -465,7 +465,7 @@ public class Player : Entity {
 
         if (isSwingingTool) {
             if (model.baseModel.currentAnimation != 4) {
-                model.frameIndex = 0;
+                //model.frameIndex = 0;
                 model.SwitchFrames();
                 model.ResetFrameTimer();
                 model.ChangeAnimation(4);

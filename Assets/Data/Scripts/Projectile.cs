@@ -29,6 +29,9 @@ public class Projectile : DamageCollider {
                 }
             }
         }
+        else {
+            QueDeath();
+        }
         if (collision.gameObject.tag == "Wall") {
             QueDeath();
         }

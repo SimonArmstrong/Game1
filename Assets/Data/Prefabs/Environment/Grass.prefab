@@ -157,6 +157,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shadow: {fileID: 0}
+  shadowObject: {fileID: 1874216346506732, guid: 3e04d28596fc69f4d9a376c1ad80b795,
+    type: 2}
   height2D: 0
   shadowHeightFineOffset: 8.6
   shadowHeightUnitOffset: 0

@@ -11,7 +11,7 @@ public class MonoBehaviour2D : MonoBehaviour {
     
     public void OnValidate()
     {
-        
+
     }
 
     private void Start()
@@ -19,9 +19,14 @@ public class MonoBehaviour2D : MonoBehaviour {
         GetComponent<LayerSort>().offset += (int)(height2D * GameManager.instance.sortingFidelity);
     }
 
+    public void UpdateHeight() {
+
+    }
+
     public virtual void Update()
     {
-        if (shadow == null) {
+        if (shadow == null)
+        {
             shadow = Instantiate(GameManager.instance.genericShadowObject, transform.position, Quaternion.identity).GetComponent<LayerShadow>();
         }
 
