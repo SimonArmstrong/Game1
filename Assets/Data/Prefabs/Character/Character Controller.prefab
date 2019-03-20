@@ -388,7 +388,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1009959657879870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5.21, z: 0}
+  m_LocalPosition: {x: 3.0446806, y: -0.9961685, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4603918460324696}
@@ -831,6 +831,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0f2141872c617674ca428800d1569f65, type: 2}
   - {fileID: 11400000, guid: 2f897a08a4a1f4342a2b3a793e52bb1b, type: 2}
   - {fileID: 11400000, guid: 6cd22c0e9d966c74fa21966670e15072, type: 2}
+  - {fileID: 11400000, guid: c3ba17f2965eeb9458539761c21e476d, type: 2}
+  - {fileID: 11400000, guid: cd2a36003dd98c14c9463003a6345849, type: 2}
   currentAnimation: 0
   destroyAfterPlayed: 0
   renderer: {fileID: 212079756471316540}
@@ -885,6 +887,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b4d6287a800810d45810778be96ab2c9, type: 2}
   - {fileID: 11400000, guid: 568bd7c2dfad95643892180f93871a9e, type: 2}
   - {fileID: 11400000, guid: d3f1317b1845a9449add341fcc5b4198, type: 2}
+  - {fileID: 11400000, guid: 6b591dd18a63f744b96c0ae0f364e8f9, type: 2}
+  - {fileID: 11400000, guid: 767c3664d29af7f4ea896d209737f9a2, type: 2}
   currentAnimation: 0
   destroyAfterPlayed: 0
   renderer: {fileID: 212757968014544432}
@@ -922,6 +926,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ce29677246b2dc84a845009ba186cb24, type: 2}
   - {fileID: 11400000, guid: ce29677246b2dc84a845009ba186cb24, type: 2}
   - {fileID: 11400000, guid: 1c184a466c710c24fa5a6c2665ab73b0, type: 2}
+  - {fileID: 11400000, guid: 6b591dd18a63f744b96c0ae0f364e8f9, type: 2}
+  - {fileID: 11400000, guid: 767c3664d29af7f4ea896d209737f9a2, type: 2}
   currentAnimation: 0
   destroyAfterPlayed: 0
   renderer: {fileID: 212824776860986904}
@@ -1057,6 +1063,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 06673f333592d1a4db6dc0c43a6b26c6, type: 2}
   - {fileID: 11400000, guid: 72b9b773c743e0d408822ecc8d9e5e53, type: 2}
   - {fileID: 11400000, guid: 8c14faacddf47d442b2016ef5ab8d8eb, type: 2}
+  - {fileID: 11400000, guid: 4fa29226f58891d49b1b85a517c681df, type: 2}
+  - {fileID: 11400000, guid: 8279e89664b02a2498d307ea717f62ce, type: 2}
   currentAnimation: 0
   destroyAfterPlayed: 0
   renderer: {fileID: 212296651151005990}
@@ -1108,6 +1116,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 767c3664d29af7f4ea896d209737f9a2, type: 2}
   - {fileID: 11400000, guid: 767c3664d29af7f4ea896d209737f9a2, type: 2}
   - {fileID: 11400000, guid: 611ff98fb2761b54e97ad8de2f004327, type: 2}
+  - {fileID: 11400000, guid: 6b591dd18a63f744b96c0ae0f364e8f9, type: 2}
+  - {fileID: 11400000, guid: 767c3664d29af7f4ea896d209737f9a2, type: 2}
   currentAnimation: 0
   destroyAfterPlayed: 0
   renderer: {fileID: 212139452477924930}
@@ -1133,6 +1143,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d3f4636750252284e86008063efdf4dc, type: 2}
   - {fileID: 11400000, guid: 4cf1e2c27e576e74b940e9968a95e71f, type: 2}
   - {fileID: 11400000, guid: 5df65623419f3494ea7f890c52534e82, type: 2}
+  - {fileID: 11400000, guid: 0f1bb51ffb4a72c4790a75292edca247, type: 2}
+  - {fileID: 11400000, guid: 5a3fbe4f1f2f0d84695132bc568914ba, type: 2}
   currentAnimation: 0
   destroyAfterPlayed: 0
   renderer: {fileID: 212674147467244382}
@@ -1158,6 +1170,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f48f20fcc88bc1b4ca6000c2b42936eb, type: 2}
   - {fileID: 11400000, guid: 1774b84e97971d54eaec0fddc7700c40, type: 2}
   - {fileID: 11400000, guid: 9b5bb64119456ac42b35c52208a69a45, type: 2}
+  - {fileID: 11400000, guid: c7e807371bc976541b7e3bdf5fd199cb, type: 2}
+  - {fileID: 11400000, guid: 960127b928b0c864d8a1187dc2bbe2a9, type: 2}
   currentAnimation: 0
   destroyAfterPlayed: 0
   renderer: {fileID: 212647907312815776}
@@ -1177,7 +1191,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc13463da97513c4f863fb2ed64bdf5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animations: []
+  animations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   currentAnimation: 0
   destroyAfterPlayed: 0
   renderer: {fileID: 212783981938014766}
@@ -1203,6 +1224,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d9785d27fde5484418436164381313be, type: 2}
   - {fileID: 11400000, guid: c48769bebd3a9e9499e17a312816a557, type: 2}
   - {fileID: 11400000, guid: 26210722987cdcf4cb4e02b20fbbd775, type: 2}
+  - {fileID: 11400000, guid: a8e875addd2b03a4aa4922d021c8f479, type: 2}
+  - {fileID: 11400000, guid: b726eeac3fe54fa47ba627b49dd6ec5f, type: 2}
   currentAnimation: 0
   destroyAfterPlayed: 0
   renderer: {fileID: 212480637985519938}
@@ -1228,6 +1251,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7e4eb686c9d2a084d9703eb1a845f5ea, type: 2}
   - {fileID: 11400000, guid: 045047431281b094e90edd04a6cc3c3e, type: 2}
   - {fileID: 11400000, guid: 611ff98fb2761b54e97ad8de2f004327, type: 2}
+  - {fileID: 11400000, guid: 6b591dd18a63f744b96c0ae0f364e8f9, type: 2}
+  - {fileID: 11400000, guid: 767c3664d29af7f4ea896d209737f9a2, type: 2}
   currentAnimation: 0
   destroyAfterPlayed: 0
   renderer: {fileID: 212647042375561596}
@@ -1249,7 +1274,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shadow: {fileID: 0}
   height2D: 1
-  shadowOffset: -32
+  shadowHeightFineOffset: 0
+  shadowHeightUnitOffset: 0
+  shadowLayerOffset: -7
   model: {fileID: 114290333891874318}
   mp: 8
   hp: 200
@@ -1333,11 +1360,13 @@ MonoBehaviour:
   comboWindowLength: 0.1
   equippedWeapon: {fileID: 0}
   harvestItem: {fileID: 11400000, guid: 4c568a49cff06e24bb8c7aceb082ea85, type: 2}
+  heldItem: {fileID: 0}
   dashDistance: 3
   rollSpeed: 8
   isAttacking: 0
   isDodging: 0
   isSwingingTool: 0
+  isCarrying: 0
   canComboSwing: 0
   canCancelDodge: 0
   canCancelAttack: 0
@@ -1599,7 +1628,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 576
+  m_SortingOrder: 155
   m_Sprite: {fileID: 21300052, guid: 453d239e1cf5b1e40908b2372731b4b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1829,7 +1858,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 869
+  m_SortingOrder: 448
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

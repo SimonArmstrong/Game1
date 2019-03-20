@@ -119,6 +119,7 @@ public class GameCursor : MonoBehaviour {
 
         Interactable inter = hit.collider.GetComponent<Interactable>();
         NPC npc = hit.collider.GetComponent<NPC>();
+        
 
         if (inter != null)
         {

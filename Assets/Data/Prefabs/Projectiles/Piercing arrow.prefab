@@ -192,8 +192,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 5
-  doesDestroy: 0
-  doesPierce: 1
+  doesDestroy: 1
+  doesPierce: 0
   damage: 5
   owner: {fileID: 0}
   conditions: []

@@ -61,6 +61,24 @@ public class DamageCollider : MonoBehaviour {
                         adc.hitInfo.Add(e.gameObject);
                 }
             }
+            return;
+        }
+
+        Hittable h = collision.GetComponent<Hittable>();
+        if (h != null) {
+            if (adc != null)
+            {
+                for (int i = 0; i < adc.hitInfo.Count; i++)
+                {
+                    if (adc.hitInfo[i] == h.gameObject) return; // Add to hit objects for this swing
+                }
+            }
+
+            damage = (damage + (Random.Range(-1f, 1f)));
+            h.OnHit(-damage);
+
+            if (adc != null)
+                adc.hitInfo.Add(h.gameObject);
         }
     }
 }

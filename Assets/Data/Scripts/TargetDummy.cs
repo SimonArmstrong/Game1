@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TargetDummy : EntityNEW {
+public class TargetDummy : Hittable {
     public float shakeModifier = 5;
     public float amount = 0;
     public float shakeSpeed = 80;
@@ -22,7 +22,7 @@ public class TargetDummy : EntityNEW {
     }
 
     float f = 0;
-    public override void Update()
+    public void Update()
     {
         if (shaking)
         {
@@ -34,6 +34,5 @@ public class TargetDummy : EntityNEW {
                 shaking = false;
             }
         }
-        base.Update();
     }
 }

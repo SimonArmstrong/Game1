@@ -16,4 +16,5 @@ public class LayerSort : MonoBehaviour {
         if (tr == null) return;
         tr.sortingOrder = -(int)(transform.position.y * GameManager.instance.sortingFidelity) + offset;
     }
+    
 }

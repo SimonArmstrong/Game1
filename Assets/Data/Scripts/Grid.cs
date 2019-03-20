@@ -17,16 +17,25 @@ public class Grid : MonoBehaviour {
     public GameObject debugObject;
     public List<GameObject> debugObjInstances;
 
-	// Use this for initialization
-	void Start () {
-        for (int i = 0; i < g_width; i++) {
-            for (int j = 0; j < g_height; j++) {
+    public static Grid instance;
+    private void Awake()
+    {
+        for (int i = 0; i < g_width; i++)
+        {
+            for (int j = 0; j < g_height; j++)
+            {
                 Vector3 pos = transform.position + new Vector3(i * scale, j * scale);
                 gridPoints.Add(pos);
-                if(debug)
+                if (debug)
                     debugObjInstances.Add(Instantiate(debugObject, pos, Quaternion.identity));
             }
         }
+        instance = this;
+    }
+
+    // Use this for initialization
+    void Start () {
+
     }
 	
 	// Update is called once per frame
@@ -34,10 +43,10 @@ public class Grid : MonoBehaviour {
         GetNearestNode(Camera.main.ScreenPointToRay(Input.mousePosition).origin);
     }
 
-    public Vector3 GetNearestNode(Vector3 pos){     //get nearest node to vector3 pos
+    public Vector3 GetNearestNode(Vector3 pos){     //get position of nearest node to vector3 pos
         Vector3 result = new Vector3();
         float nearest = 99999;
-        int nearestIndex = -1;
+        int nearestIndex = 0;
         for (int i = 0; i < gridPoints.Count; i++) {
             float distance = (pos - gridPoints[i]).magnitude;
             if(distance < nearest){

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: Carry Idle_GreenShirtCarryIdle
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 807640668f1d982478bb269a2b7e2b7c, type: 2}
+  - {fileID: 11400000, guid: 994d1b38d7f234f4b9ea25b3de760249, type: 2}
+  - {fileID: 11400000, guid: 3fad7687b67c81345aa59baf3497d09d, type: 2}
+  - {fileID: 11400000, guid: 32947dbf34a289f4a88548f1aaff4a6f, type: 2}
+  hasSound: 0

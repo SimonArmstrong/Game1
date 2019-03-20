@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: Carry Idle_BrownPantsCarryIdle
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: a2769cf331038af46865c26af8b5c4e0, type: 2}
+  - {fileID: 11400000, guid: 5aace3d977e90a74489ad61d49d7d57f, type: 2}
+  - {fileID: 11400000, guid: c286c5ca79200484dbfaebf5388dab26, type: 2}
+  - {fileID: 11400000, guid: 525e0518f02c7724db00b71af2b41bad, type: 2}
+  hasSound: 0

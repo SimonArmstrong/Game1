@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a42cbc7d10944191d171fbe0bccca, type: 3}
+  m_Name: CarryRun_Shirt
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 11400000, guid: 8eaa2238b07da264b9c732182915dfb1, type: 2}
+  - {fileID: 11400000, guid: b602141893aa2804e806ecf05f28171c, type: 2}
+  - {fileID: 11400000, guid: e9c21a4005968374cac6cb72b0293af6, type: 2}
+  - {fileID: 11400000, guid: 0d281dc354cbfb8439054770b89ae2f4, type: 2}
+  hasSound: 0

@@ -64,6 +64,7 @@ public class Player : Entity {
     public float comboWindowLength = 0.9f;
     public Weapon equippedWeapon;
     public ToolItem harvestItem;
+    public GameObject heldItem;
     float comboWindowTimer = 0;
 
     [Header("Dodge Roll")]
@@ -74,6 +75,7 @@ public class Player : Entity {
     public bool isAttacking = false;
     public bool isDodging = false;
     public bool isSwingingTool = false;
+    public bool isCarrying = false;
 
     public bool canComboSwing = false;
     public bool canCancelDodge = false;
@@ -223,6 +225,7 @@ public class Player : Entity {
 
     private void HandleDodge()
     {
+        if (isCarrying) return;
         if (isSwingingTool) return;
         if (Input.GetButtonDown("Dodge") && isDodging)
         {
@@ -280,6 +283,7 @@ public class Player : Entity {
 
         if (isDodging) return;
         if (isSwingingTool) return;
+        if (isCarrying) return;
 
         dcDown.currentCombo = combonum - 2;
         dcUp.currentCombo = combonum - 2;
@@ -383,6 +387,7 @@ public class Player : Entity {
         if (isStunned) return;
         if (isDodging) return;
         if (isSwingingTool) return;
+        if (isCarrying) return;
         if (bowInput) return;
 
         rootMotionSpeed = 1;
@@ -442,6 +447,7 @@ public class Player : Entity {
         if (isAttacking) return;
         if (isStunned) return;
         if (isDodging) return;
+        if (isCarrying) return;
         if (bowInput) {
             LookAt(aimDir);
 
@@ -456,6 +462,7 @@ public class Player : Entity {
     private void HandleHarvesting() {
         if (isAttacking) return;
         if (isStunned) return;
+        if (isCarrying) return;
         if (isDodging) return;
         if (harvestItem == null) return;
 
@@ -487,6 +494,63 @@ public class Player : Entity {
         if (isDodging) return;
         if (isStunned) return;
         if (isSwingingTool) return;
+        if (isCarrying) return;
+    }
+
+    private void HandleCarry() {
+        if (isAttacking) return;
+        if (isDodging) return;
+        if (isStunned) return;
+        if (isSwingingTool) return;
+
+        if (heldItem != null) {
+            isCarrying = true;
+        }
+
+        if (!isCarrying) return;
+
+        ////////////////////////////////////////////////////////////////
+
+        int CARRY_RUN = 6;  // Animation index for Carry Run
+        int CARRY_IDLE = 5; // Animation index for Carry Idle
+
+        if (dirVec.magnitude > 0.001f)
+        {
+            if (model.baseModel.currentAnimation != CARRY_RUN) model.ChangeAnimation(CARRY_RUN);
+        }
+        else
+        {
+            if (model.baseModel.currentAnimation != CARRY_IDLE)
+            {
+                model.ChangeAnimation(CARRY_IDLE);
+                model.ResetFrameTimer();
+            }
+        }
+
+        model.animSpeedModifier = (attributes.moveSpeed / 2.3f) * 1.25f;
+
+        Vector3 movement = dirVec;
+
+        model.CalculateDirection(mov);
+        model.UpdateFrames();
+        
+        mov = movement;
+        
+        switch (model.direction)
+        {
+            case Direction.forward:
+                interactionTrigger.transform.localPosition = new Vector3(0.0f, -0.5f, 0.0f);
+                break;
+            case Direction.right:
+                interactionTrigger.transform.localPosition = new Vector3(0.5f, 0.0f, 0.0f);
+                break;
+            case Direction.back:
+                interactionTrigger.transform.localPosition = new Vector3(0.0f, 0.5f, 0.0f);
+                break;
+            case Direction.left:
+                interactionTrigger.transform.localPosition = new Vector3(-0.5f, 0.0f, 0.0f);
+                break;
+        }
     }
 
     public void OnUnequip(EquippableItem item)
@@ -660,6 +724,7 @@ public class Player : Entity {
         HandleMovement();
         HandleShooting();
         HandleConsumption();
+        HandleCarry();
 
         model.sortingOrder = -(int)(transform.position.y * GameManager.instance.sortingFidelity);
         //HealthHUD.instance.UpdateHearts();

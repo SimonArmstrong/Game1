@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grass : EntityNEW {
+public class Grass : Hittable {
     [System.Serializable]
     public class Drop {
         public Item item;
